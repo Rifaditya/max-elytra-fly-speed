@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "max-elytra-fly-speed",
+  "version": "${version}",
+  "name": "Max Elytra Fly Speed",
+  "description": "Customize Elytra flight speed limit via gamerule.",
+  "authors": [
+    "Dasik (Rifaditya)"
+  ],
+  "contact": {
+    "homepage": "https://github.com/Rifaditya/max-elytra-fly-speed",
+    "sources": "https://github.com/Rifaditya/max-elytra-fly-speed"
+  },
+  "license": "GPL-3.0-or-later",
+  "icon": "assets/max-elytra-fly-speed/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.instantgratification.maxelytraflyspeed.MaxElytraFlySpeedFabric"
+    ],
+    "client": [
+      "net.instantgratification.maxelytraflyspeed.MaxElytraFlySpeedFabricClient"
+    ],
+    "modmenu": [
+      "net.instantgratification.maxelytraflyspeed.config.ModMenuIntegration"
+    ]
+  },
+  "mixins": [
+    "max-elytra-fly-speed.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.1",
+    "minecraft": ">=26.2-",
+    "java": ">=25",
+    "fabric-api": "*",
+    "dasik-library": "*"
+  },
+  "suggests": {
+    "cloth-config": "*",
+    "modmenu": "*"
+  }
+}
