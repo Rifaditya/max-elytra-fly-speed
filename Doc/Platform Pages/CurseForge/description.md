@@ -1,5 +1,5 @@
 <p align="center">
-    <a href="https://modrinth.com/mod/fabric-api"><img src="https://img.shields.io/badge/Requires-Fabric_API-blue?style=for-the-badge&logo=fabric" alt="Requires Fabric API"></a>
+    <a href="https://www.curseforge.com/minecraft/mc-mods/fabric-api"><img src="https://img.shields.io/badge/Requires-Fabric_API-blue?style=for-the-badge&logo=fabric" alt="Requires Fabric API"></a>
     <img src="https://img.shields.io/badge/Language-Java_25-orange?style=for-the-badge&logo=java" alt="Java 25">
     <img src="https://img.shields.io/badge/License-GPLv3-green?style=for-the-badge" alt="License">
     <img src="https://img.shields.io/badge/Minecraft-26.2+-brightgreen?style=for-the-badge" alt="Minecraft">
@@ -9,7 +9,7 @@
 
 **No Backports:** This mod targets **Minecraft 26.2+**. Older versions are unsupported.
 
-> **Break the Sound Barrier. Limitless Velocity. Instant Flight.**
+<blockquote><strong>Break the Sound Barrier. Limitless Velocity. Instant Flight.</strong></blockquote>
 
 Every Minecraft player knows the limitation of vanilla Elytra flight: no matter how hard you dive or how many firework rockets you use, you are capped. **Max Elytra Fly Speed** removes these restrictions, allowing customizable speed and a gradual acceleration curve powered by native GameRules.
 
