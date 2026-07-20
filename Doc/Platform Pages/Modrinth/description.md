@@ -17,6 +17,14 @@ Part of the **Instant Gratification Collection** — mods that speed up and enha
 
 ---
 
+## 🎥 Showcase Video
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Oz8NTfX0YmE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+*Click the player above to watch the mod showcase in action!*
+
+---
+
 ## ✨ Features
 
 *   **Custom Max Velocity Cap**: Clamp maximum speed to any value (default is vanilla 30 blocks/sec). Set it to high limits like 3000 blocks/sec for extreme speed!
