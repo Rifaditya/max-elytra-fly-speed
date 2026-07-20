@@ -68,7 +68,8 @@ If you enjoy the **Instant Gratification** collection, consider fueling the next
 | **License** | GPLv3 |
 
 > [!IMPORTANT]
-> **📦 Modpack Permissions:** You are free to include this mod in any modpack on any platform. However, the mod itself must be downloaded from its official distribution pages on **Modrinth** or **CurseForge**. Re-uploading or redistributing the mod jar file to third-party sites is strictly prohibited.
+> **📦 Modpack Permissions:** You are free to include this mod in any modpack on any platform. However, the mod itself must be downloaded from its official distribution pages on **Modrinth** or **CurseForge**. Re-uploading or redistributing the mod jar file to third-party sites is strictly prohibited unless explicitly permitted by the creator.
+
 
 ---
 

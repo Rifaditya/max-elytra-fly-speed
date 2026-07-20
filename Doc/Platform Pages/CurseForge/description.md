@@ -69,8 +69,9 @@ If you enjoy the **Instant Gratification** collection, consider fueling the next
 
 <blockquote>
     <strong>📦 Modpack Permissions:</strong><br>
-    You are free to include this mod in any modpack on any platform. However, the mod itself must be downloaded from its official distribution pages on <strong>Modrinth</strong> or <strong>CurseForge</strong>. Re-uploading or redistributing the mod jar file to third-party sites is strictly prohibited.
+    You are free to include this mod in any modpack on any platform. However, the mod itself must be downloaded from its official distribution pages on <strong>Modrinth</strong> or <strong>CurseForge</strong>. Re-uploading or redistributing the mod jar file to third-party sites is strictly prohibited unless explicitly permitted by the creator.
 </blockquote>
+
 
 ---
 
