@@ -30,9 +30,9 @@ public class MaxElytraFlySpeedFabric implements ModInitializer {
     public void onInitialize() {
         LOGGER.info("Instant Gratification: Max Elytra Fly Speed Initializing...");
 
-        MAX_ELYTRA_FLY_SPEED = DynamicGameRuleManager.integerRule(MOD_ID + ":max_elytra_fly_speed", CUSTOM_CATEGORY, 30)
+        MAX_ELYTRA_FLY_SPEED = DynamicGameRuleManager.integerRule(MOD_ID + ":max_elytra_fly_speed", CUSTOM_CATEGORY, 50)
             .name("Max Elytra Fly Speed")
-            .description("Maximum velocity of Elytra flight in Blocks/Second. Default: 30 blocks/sec.")
+            .description("Maximum velocity of Elytra flight in Blocks/Second. Default: 50 blocks/sec.")
             .min(1)
             .register();
 

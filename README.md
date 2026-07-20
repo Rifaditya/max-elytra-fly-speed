@@ -8,4 +8,4 @@ Part of the **Instant Gratification Collection** — mods that respect the playe
 
 The mod registers a sovereign `GameRule`:
 
-- `/gamerule max-elytra-fly-speed:max_elytra_fly_speed <Integer>`: Sets the maximum flight speed of Elytras in Blocks/Second. Default: `30` blocks/sec.
+- `/gamerule max-elytra-fly-speed:max_elytra_fly_speed <Integer>`: Sets the maximum flight speed of Elytras in Blocks/Second. Default: `50` blocks/sec.

@@ -1,7 +1,7 @@
 {
   "gamerule.category.max-elytra-fly-speed.max-elytra-fly-speed": "Max Elytra Fly Speed",
   "gamerule.max-elytra-fly-speed.max_elytra_fly_speed": "Max Speed (Blocks/Sec)",
-  "gamerule.max-elytra-fly-speed.max_elytra_fly_speed.description": "Maximum velocity of Elytra flight in Blocks/Second. Default: 30 blocks/sec.",
+  "gamerule.max-elytra-fly-speed.max_elytra_fly_speed.description": "Maximum velocity of Elytra flight in Blocks/Second. Default: 50 blocks/sec.",
   "gamerule.max-elytra-fly-speed.elytra_initial_boost_speed": "Initial Boost Speed",
   "gamerule.max-elytra-fly-speed.elytra_initial_boost_speed.description": "Speed threshold (Blocks/Second) up to which snappy vanilla rocket boost is applied. Default is 30.",
   "gamerule.max-elytra-fly-speed.elytra_high_speed_acceleration": "High Speed Acceleration",

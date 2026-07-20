@@ -39,7 +39,7 @@ Part of the **Instant Gratification Collection** — mods that speed up and enha
 No messy config files. Max Elytra Fly Speed uses the **Native Minecraft Game Rules** system. All mod parameters are grouped into a dedicated **"Max Elytra Fly Speed"** category in the official UI.
 
 ### Sovereign GameRules
-*   `max-elytra-fly-speed:max_elytra_fly_speed` (Default: `30`): The absolute maximum velocity (Blocks/Second) of Elytra flight.
+*   `max-elytra-fly-speed:max_elytra_fly_speed` (Default: `50`): The absolute maximum velocity (Blocks/Second) of Elytra flight.
 *   `max-elytra-fly-speed:elytra_initial_boost_speed` (Default: `30`): Speed threshold (Blocks/Second) up to which snappy vanilla rocket boost is applied.
 *   `max-elytra-fly-speed:elytra_high_speed_acceleration` (Default: `15`): Gradual acceleration rate (permille) above the initial boost speed threshold.
 
