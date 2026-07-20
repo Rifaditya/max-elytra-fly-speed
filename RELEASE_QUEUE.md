@@ -4,6 +4,7 @@ This file tracks which built versions (from `/Archive/builds/`) have been manual
 
 ## 🚀 Published & Backlog Queue
 
+- [ ] **`1.0.6`** (2026-07-20) - Increased default max speed limit to 50 blocks/sec and added vanilla equipped Elytra icon.
 - [ ] **`1.0.5`** (2026-07-16) - Split firework boost logic: vanilla math up to 30 blocks/sec, gradual drag-compensated math above.
 - [x] **`1.0.4`** (2026-07-16) - Dynamic drag coefficient and smoother firework boost acceleration. Allows diving down to build speed.
 - [x] **`1.0.3`** (2026-07-16) - Gradual Elytra acceleration curve with drag compensation matching powered rails (0.06 blocks/tick acceleration).
