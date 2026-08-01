@@ -28,6 +28,7 @@ public class MaxElytraFlySpeedFabric implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        net.instantgratification.maxelytraflyspeed.util.ModVersionGuard.checkClass("Max Elytra Fly Speed", "net.minecraft.world.item.ItemStack");
         LOGGER.info("Instant Gratification: Max Elytra Fly Speed Initializing...");
 
         MAX_ELYTRA_FLY_SPEED = DynamicGameRuleManager.integerRule(MOD_ID + ":max_elytra_fly_speed", CUSTOM_CATEGORY, 50)

@@ -27,3 +27,11 @@ Provide a lightweight, high-performance solution for modifying the maximum fligh
 - **Mod ID**: `max-elytra-fly-speed`
 - **Dependencies**: `fabric-loader`, `minecraft (>=26.2-)`, `dasik-library (>=1.8.2)`
 - **Namespace**: `net.instantgratification.maxelytraflyspeed`
+
+## 6. Future Backlog & Flight Acceleration Refinement
+
+For detailed problem contexts, target code specifications, and acceptance criteria for planned flight acceleration fixes, see **[BACKLOG.md](BACKLOG.md)**:
+- **`[BL-MEFS-001]` Rocket Acceleration Vector Scaling** ([FireworkRocketEntityMixin.java](src/main/java/net/instantgratification/maxelytraflyspeed/mixin/FireworkRocketEntityMixin.java))
+- **`[BL-MEFS-002]` Dynamic Drag Floor Scaling** ([LivingEntityMixin.java](src/main/java/net/instantgratification/maxelytraflyspeed/mixin/LivingEntityMixin.java))
+
+
