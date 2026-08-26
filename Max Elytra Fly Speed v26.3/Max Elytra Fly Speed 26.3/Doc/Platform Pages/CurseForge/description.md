@@ -7,7 +7,7 @@
 
 # 🚀 Max Elytra Fly Speed
 
-**Active Version Policy:** I build **1 JAR for 1 Version**. I only update and maintain the latest active Minecraft version (e.g. when 26.3 is released, 26.2 is retired). No backports or legacy version maintenance. Please do not ask.
+**1 Jar 1 Version Policy:** I build **1 dedicated JAR for each Minecraft version** (e.g. MC 26.2, MC 26.3). Please download the exact build that matches your Minecraft installation.
 
 <blockquote><strong>Break the Sound Barrier. Limitless Velocity. Instant Flight.</strong></blockquote>
 
