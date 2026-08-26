@@ -1,0 +1,9 @@
+{
+  "gamerule.category.max-elytra-fly-speed.max-elytra-fly-speed": "Velocidad Máxima de los Élitros",
+  "gamerule.max-elytra-fly-speed.max_elytra_fly_speed": "Velocidad Máxima (Bloques/Seg)",
+  "gamerule.max-elytra-fly-speed.max_elytra_fly_speed.description": "Velocidad máxima absoluta del vuelo con élitros en bloques/segundo. Por defecto: 50 bloques/seg.",
+  "gamerule.max-elytra-fly-speed.elytra_initial_boost_speed": "Velocidad de Impulso Inicial",
+  "gamerule.max-elytra-fly-speed.elytra_initial_boost_speed.description": "Umbral de velocidad (Bloques/Segundo) hasta el cual se aplica el impulso rápido de cohetes vanilla. Por defecto: 30.",
+  "gamerule.max-elytra-fly-speed.elytra_high_speed_acceleration": "Aceleración de Alta Velocidad",
+  "gamerule.max-elytra-fly-speed.elytra_high_speed_acceleration.description": "Porcentaje de aceleración por tick por encima del umbral de velocidad inicial. Por defecto: 15 (15% por tick)."
+}

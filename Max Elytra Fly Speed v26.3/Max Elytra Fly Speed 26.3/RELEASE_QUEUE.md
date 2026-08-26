@@ -4,6 +4,7 @@ This file tracks which built versions (from `/Archive/builds/`) have been manual
 
 ## 🚀 Published & Backlog Queue
 
+- [ ] **`1.0.16+26.3`** (2026-08-26) - Spanish (es_es, es_mx) Localization.
 - [ ] **`1.0.15+26.3`** (2026-08-26) - Russian (ru_ru) Localization.
 - [ ] **`1.0.14+26.3`** (2026-08-26) - Traditional Chinese (zh_tw, zh_hk) Localization.
 - [ ] **`1.0.13+26.3`** (2026-08-26) - Simplified Chinese (zh_cn) Localization.
