@@ -1,0 +1,118 @@
+# Kinetic Physics & Dynamic Drag Floor Scaling — MC 26.2
+
+This page details the aerodynamic physics model, dynamic drag floor scaling equations, and bytecode integration powering Elytra fall-flying mechanics in **Max Elytra Fly Speed (MC 26.2)**.
+
+---
+
+## 📋 Subsystem Infobox
+
+| Parameter | Technical Details |
+| :--- | :--- |
+| **Subsystem Name** | Aerodynamic Drag Floor Scaling & Velocity Limiting |
+| **Java Implementation** | `net.instantgratification.maxelytraflyspeed.util.ElytraDragHelper` |
+| **Bytecode Mixin** | `net.instantgratification.maxelytraflyspeed.mixin.LivingEntityMixin` |
+| **Target Methods** | `LivingEntity.updateFallFlyingMovement`, `LivingEntity.travelFallFlying` |
+| **Controlling GameRule** | `max-elytra-fly-speed:max_elytra_fly_speed` (Default: `50`) |
+| **Algorithmic Complexity** | $\mathcal{O}(1)$ time complexity, zero memory allocations per tick |
+| **Parity Standard** | Exact Vanilla $0.99H / 0.98V$ drag at $\le 50\text{ Blocks/Sec}$ |
+
+---
+
+## 🎮 Step-by-Step Player Workflow
+
+In vanilla Minecraft, players attempting high-speed Elytra flight experience an artificial "velocity wall": vanilla hardcoded drag factors ($0.99\times$ horizontal and $0.98\times$ vertical) bleed off speed rapidly, making high-speed dives short-lived.
+
+With **Max Elytra Fly Speed**:
+1. **Takeoff & Fall-Flying**: The player deploys Elytra wings by pressing `Jump` mid-air.
+2. **Diving for Acceleration**: Pitching the camera downward converts gravitational potential energy into kinetic velocity.
+3. **Dynamic Drag Relaxation**: As server administrators increase `max_elytra_fly_speed` above $50\text{ BPS}$, the aerodynamic drag loss smoothly decreases in inverse proportion.
+4. **Sustained High-Speed Glide**: Pulling up into a horizontal glide preserves momentum across thousands of blocks without sudden velocity drops.
+5. **Hard Velocity Clamping**: If external explosions, external mods, or extreme dives accelerate the player beyond the configured ceiling, the velocity vector is smoothly scaled down without altering flight direction.
+
+---
+
+## 📐 Mathematical Aerodynamic Models
+
+### 1. Speed Ratio Scaling
+The dynamic scaling factor $\text{speedRatio}$ compares the configured maximum speed ceiling against the vanilla baseline ($50.0\text{ BPS}$):
+
+$$\text{speedRatio} = \max\left(1.0, \frac{\text{maxSpeedBps}}{50.0}\right)$$
+
+* When $\text{maxSpeedBps} \le 50$: $\text{speedRatio} = 1.0$ (100% vanilla physics parity).
+* When $\text{maxSpeedBps} > 50$: $\text{speedRatio}$ scales linearly with the configured limit (e.g. $2.0$ at $100\text{ BPS}$, $4.0$ at $200\text{ BPS}$).
+
+### 2. Inverse Drag Floor Equations
+Drag loss per tick is computed by relaxing the baseline vanilla drag loss ($0.01$ horizontal, $0.02$ vertical) by $\text{speedRatio}$:
+
+$$\text{dragLossH} = \frac{0.01}{\text{speedRatio}}, \quad \text{dragLossV} = \frac{0.02}{\text{speedRatio}}$$
+
+### 3. Velocity Damping Transformation
+Every game tick ($20\text{ ticks} = 1\text{ second}$), the movement vector $\vec{v} = \langle v_x, v_y, v_z \rangle$ is updated via the Hadamard product:
+
+$$\vec{v}_{t+1} = \vec{v}_t \odot \begin{pmatrix} 1.0 - \text{dragLossH} \\ 1.0 - \text{dragLossV} \\ 1.0 - \text{dragLossH} \end{pmatrix}$$
+
+### 4. Hard Velocity Ceiling Clamping
+If the magnitude $\|\vec{v}\|$ exceeds the maximum tick speed $v_{\text{max\_ticks}} = \frac{\text{maxSpeedBps}}{20.0}$:
+
+$$\vec{v}_{\text{clamped}} = \vec{v} \times \left(\frac{v_{\text{max\_ticks}}}{\|\vec{v}\|}\right)$$
+
+---
+
+## 📊 Visual ASCII Damping Diagram
+
+```
+ Drag Loss (%)
+  2.0% |   * (Vertical Vanilla Baseline: 0.98x)
+       |    \
+  1.0% |     * (Horizontal Vanilla Baseline: 0.99x)
+       |      \
+  0.5% |       *---* (100 BPS: 0.995x / 0.990x)
+       |            \
+ 0.25% |             *---*---* (200 BPS: 0.9975x / 0.9950x)
+       +----------------------------------------------------> Configured Max Speed (BPS)
+       0    30   50   100  200  300  400  500
+```
+
+---
+
+## 📑 Drag Multiplier Reference Table
+
+| Max Speed Setting | $\text{speedRatio}$ | Horizontal Drag Loss ($\text{dragLossH}$) | Vertical Drag Loss ($\text{dragLossV}$) | Horizontal Multiplier | Vertical Multiplier | Velocity Ceiling (Blocks/Tick) |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **30 BPS** | $1.00$ | $0.0100$ ($1.00\%$) | $0.0200$ ($2.00\%$) | $0.9900\times$ | $0.9800\times$ | $1.50\text{ blocks/tick}$ |
+| **50 BPS** (Default) | $1.00$ | $0.0100$ ($1.00\%$) | $0.0200$ ($2.00\%$) | $0.9900\times$ | $0.9800\times$ | $2.50\text{ blocks/tick}$ |
+| **100 BPS** | $2.00$ | $0.0050$ ($0.50\%$) | $0.0100$ ($1.00\%$) | $0.9950\times$ | $0.9900\times$ | $5.00\text{ blocks/tick}$ |
+| **200 BPS** | $4.00$ | $0.0025$ ($0.25\%$) | $0.0050$ ($0.50\%$) | $0.9975\times$ | $0.9950\times$ | $10.00\text{ blocks/tick}$ |
+| **500 BPS** | $10.00$ | $0.0010$ ($0.10\%$) | $0.0020$ ($0.20\%$) | $0.9990\times$ | $0.9980\times$ | $25.00\text{ blocks/tick}$ |
+
+---
+
+## 💻 Developer & Bytecode Mixin Hooks
+
+### 1. `ElytraDragHelper.java`
+```java
+package net.instantgratification.maxelytraflyspeed.util;
+
+import net.minecraft.world.phys.Vec3;
+
+public final class ElytraDragHelper {
+    public static Vec3 calculateFallFlyingDrag(Vec3 movement, int maxSpeedBps) {
+        if (movement == null) return Vec3.ZERO;
+
+        double speedRatio = Math.max(1.0, maxSpeedBps / 50.0);
+        double dragLossH = 0.01 / speedRatio;
+        double dragLossV = 0.02 / speedRatio;
+
+        return movement.multiply(1.0 - dragLossH, 1.0 - dragLossV, 1.0 - dragLossH);
+    }
+}
+```
+
+---
+
+## 🧭 Navigation
+
+* [[🏠 Subproject Home|Home]]
+* [[🚀 Rocket Propulsion & Acceleration|Rocket-Propulsion-and-Acceleration]]
+* [[⚙️ GameRules & Configuration|GameRules-and-Configuration]]
+* [[🧩 Architecture & Mixins|Architecture-and-Mixins]]
