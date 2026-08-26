@@ -1,0 +1,9 @@
+{
+  "gamerule.category.max-elytra-fly-speed.max-elytra-fly-speed": "Vitesse de Vol Maximale des Élytres",
+  "gamerule.max-elytra-fly-speed.max_elytra_fly_speed": "Vitesse Maximale (Blocs/Sec)",
+  "gamerule.max-elytra-fly-speed.max_elytra_fly_speed.description": "Vitesse maximale absolue du vol en élytres en Blocs/Seconde. Par défaut : 50 blocs/sec.",
+  "gamerule.max-elytra-fly-speed.elytra_initial_boost_speed": "Vitesse de Propulsion Initiale",
+  "gamerule.max-elytra-fly-speed.elytra_initial_boost_speed.description": "Seuil de vitesse (Blocs/Seconde) jusqu'auquel la propulsion vive des fusées feux d'artifice vanilla s'applique. Par défaut : 30.",
+  "gamerule.max-elytra-fly-speed.elytra_high_speed_acceleration": "Accélération Haute Vitesse",
+  "gamerule.max-elytra-fly-speed.elytra_high_speed_acceleration.description": "Taux d'accélération en pourcentage par tick au-dessus du seuil de propulsion initiale. Par défaut : 15 (15% par tick)."
+}
