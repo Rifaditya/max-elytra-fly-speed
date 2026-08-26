@@ -4,6 +4,7 @@ This file tracks which built versions (from `/Archive/builds/`) have been manual
 
 ## 🚀 Published & Backlog Queue
 
+- [ ] **`1.0.14+26.3`** (2026-08-26) - Traditional Chinese (zh_tw, zh_hk) Localization.
 - [ ] **`1.0.13+26.3`** (2026-08-26) - Simplified Chinese (zh_cn) Localization.
 - [ ] **`1.0.12+26.3`** (2026-08-26) - Backlog Pruning & Platform Documentation Sync.
 - [ ] **`1.0.11+26.3`** (2026-08-26) - Headless JUnit Reality Test Suite.

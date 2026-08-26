@@ -1,0 +1,9 @@
+{
+  "gamerule.category.max-elytra-fly-speed.max-elytra-fly-speed": "鞘翅最大飛行速度",
+  "gamerule.max-elytra-fly-speed.max_elytra_fly_speed": "最大飛行速度 (方塊/秒)",
+  "gamerule.max-elytra-fly-speed.max_elytra_fly_speed.description": "鞘翅飛行的絕對最大速度（方塊/秒）。預設值：50 方塊/秒。",
+  "gamerule.max-elytra-fly-speed.elytra_initial_boost_speed": "初始助推速度",
+  "gamerule.max-elytra-fly-speed.elytra_initial_boost_speed.description": "應用原版快速煙火火箭助推的速度閾值（方塊/秒）。預設值：30。",
+  "gamerule.max-elytra-fly-speed.elytra_high_speed_acceleration": "高速加速度",
+  "gamerule.max-elytra-fly-speed.elytra_high_speed_acceleration.description": "超過初始助推速度後的高速加速百分比率。預設值：15（每刻 15%）。"
+}
