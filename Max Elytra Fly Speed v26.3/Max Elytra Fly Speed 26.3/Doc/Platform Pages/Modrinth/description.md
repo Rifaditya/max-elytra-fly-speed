@@ -1,4 +1,4 @@
-﻿<p align="center">
+<p align="center">
     <a href="https://modrinth.com/mod/fabric-api"><img src="https://img.shields.io/badge/Requires-Fabric_API-blue?style=for-the-badge&logo=fabric" alt="Requires Fabric API"></a>
     <img src="https://img.shields.io/badge/Language-Java_25-orange?style=for-the-badge&logo=java" alt="Java 25">
     <img src="https://img.shields.io/badge/License-GPLv3-green?style=for-the-badge" alt="License">
@@ -27,12 +27,12 @@ Part of the **Instant Gratification Collection** — mods that speed up and enha
 
 ## ✨ Features
 
-*   **Custom Max Velocity Cap**: Clamp maximum speed to any value (default is vanilla 30 blocks/sec). Set it to high limits like 3000 blocks/sec for extreme speed!
-*   **Gradual Acceleration Curve**: Integrates smooth, powered-rail-like acceleration when boosting. Prevents jarring, instant thrust acceleration.
+*   **Custom Max Velocity Cap**: Clamp maximum speed to any value (default: `50` blocks/sec). Set it to high limits like 100, 200, or 3000 blocks/sec for extreme speed!
+*   **Proportional Rocket Boost Acceleration**: Rockets smoothly accelerate your flight trajectory toward your target maximum speed across 2–3 boosts using proportional vector convergence.
 *   **Dual-Phase Speed Scaling**:
-    *   **Phase 1 (Initial Boost)**: Utilizes vanilla snappy launch mechanics up to a configurable speed threshold.
-    *   **Phase 2 (High Speed Glide)**: Shifts to smooth, drag-compensated acceleration above the threshold.
-*   **Gravity Dives**: Dynamically scales drag down at higher limits, allowing you to build up speed gradually by diving down and pulling up.
+    *   **Phase 1 (Initial Boost)**: Snappy vanilla launch mechanics up to the configurable threshold (default: `30` blocks/sec).
+    *   **Phase 2 (High Speed Glide)**: Proportional acceleration convergence pulling velocity smoothly toward your max flight speed ceiling.
+*   **Dynamic Aerodynamic Drag Dives**: Aerodynamic drag relaxes dynamically at higher speed settings, allowing pitch dives to build up and sustain high-speed momentum.
 *   **Client Settings Integration**: Singleplayer configuration GUI support via **ModMenu** + **Cloth Config**.
 
 ---
@@ -49,7 +49,7 @@ No messy config files. Max Elytra Fly Speed uses the **Native Minecraft Game Rul
 ### Sovereign GameRules
 *   `max-elytra-fly-speed:max_elytra_fly_speed` (Default: `50`): The absolute maximum velocity (Blocks/Second) of Elytra flight.
 *   `max-elytra-fly-speed:elytra_initial_boost_speed` (Default: `30`): Speed threshold (Blocks/Second) up to which snappy vanilla rocket boost is applied.
-*   `max-elytra-fly-speed:elytra_high_speed_acceleration` (Default: `15`): Gradual acceleration rate (permille) above the initial boost speed threshold.
+*   `max-elytra-fly-speed:elytra_high_speed_acceleration` (Default: `15`): High-speed acceleration rate percentage (15% per tick) above the initial boost speed threshold.
 
 ---
 
