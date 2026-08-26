@@ -1,0 +1,9 @@
+{
+  "gamerule.category.max-elytra-fly-speed.max-elytra-fly-speed": "Maximale Elytren-Fluggeschwindigkeit",
+  "gamerule.max-elytra-fly-speed.max_elytra_fly_speed": "Max. Geschwindigkeit (Blöcke/Sek.)",
+  "gamerule.max-elytra-fly-speed.max_elytra_fly_speed.description": "Absolute Höchstgeschwindigkeit des Elytrenflugs in Blöcken/Sekunde. Standard: 50 Blöcke/Sek.",
+  "gamerule.max-elytra-fly-speed.elytra_initial_boost_speed": "Anfängliche Boost-Geschwindigkeit",
+  "gamerule.max-elytra-fly-speed.elytra_initial_boost_speed.description": "Geschwindigkeitsschwelle (Blöcke/Sek.), bis zu der schneller Vanilla-Raketen-Boost angewendet wird. Standard: 30.",
+  "gamerule.max-elytra-fly-speed.elytra_high_speed_acceleration": "Hochgeschwindigkeitsbeschleunigung",
+  "gamerule.max-elytra-fly-speed.elytra_high_speed_acceleration.description": "Prozentuale Beschleunigungsrate pro Tick oberhalb der anfänglichen Boost-Schwelle. Standard: 15 (15% pro Tick)."
+}
