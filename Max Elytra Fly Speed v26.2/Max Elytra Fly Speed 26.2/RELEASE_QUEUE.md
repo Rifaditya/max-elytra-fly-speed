@@ -4,6 +4,7 @@ This file tracks which built versions (from `/Archive/builds/`) have been manual
 
 ## 🚀 Published & Backlog Queue
 
+- [ ] **`1.0.10+26.2`** (2026-08-26) - Dynamic Drag Floor Scaling & High Speed Glide ([BL-MEFS-002]).
 - [ ] **`1.0.9+26.2`** (2026-08-26) - Rocket Boost Proportional Acceleration Scaling ([BL-MEFS-001]).
 - [x] **`1.0.8+26.2`** (2026-07-22) - ModVersionGuard Knot ClassLoader Fix.
 - [x] **`1.0.7+26.2`** (2026-07-22) - Forward Compatibility & Version Guard.

@@ -5,6 +5,7 @@ package net.instantgratification.maxelytraflyspeed.mixin;
 // Verified against: LivingEntity.java (26.2+)
 
 import net.instantgratification.maxelytraflyspeed.MaxElytraFlySpeedFabric;
+import net.instantgratification.maxelytraflyspeed.util.ElytraDragHelper;
 import net.dasik.social.api.gamerule.DynamicGameRuleManager;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.phys.Vec3;
@@ -27,13 +28,7 @@ public abstract class LivingEntityMixin {
     private Vec3 maxelytraflyspeed$adjustDrag(Vec3 movement, double x, double y, double z) {
         LivingEntity entity = (LivingEntity) (Object) this;
         int maxSpeedBps = DynamicGameRuleManager.getInt(entity.level(), MaxElytraFlySpeedFabric.MAX_ELYTRA_FLY_SPEED);
-        double maxSpeedTicks = maxSpeedBps / 20.0;
-
-        double gravity = entity.getGravity();
-        double dragLossV = Math.min(0.02, gravity / maxSpeedTicks);
-        double dragLossH = Math.min(0.01, dragLossV * 0.5);
-
-        return movement.multiply(1.0 - dragLossH, 1.0 - dragLossV, 1.0 - dragLossH);
+        return ElytraDragHelper.calculateFallFlyingDrag(movement, maxSpeedBps);
     }
 
     @Inject(
