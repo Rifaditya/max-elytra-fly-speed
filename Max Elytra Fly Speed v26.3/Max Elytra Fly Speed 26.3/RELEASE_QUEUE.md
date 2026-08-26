@@ -4,6 +4,7 @@ This file tracks which built versions (from `/Archive/builds/`) have been manual
 
 ## 🚀 Published & Backlog Queue
 
+- [ ] **`1.0.11+26.3`** (2026-08-26) - Headless JUnit Reality Test Suite.
 - [ ] **`1.0.10+26.3`** (2026-08-26) - Dynamic Drag Floor Scaling & High Speed Glide ([BL-MEFS-002]).
 - [ ] **`1.0.9+26.3`** (2026-08-26) - Rocket Boost Proportional Acceleration Scaling ([BL-MEFS-001]).
 - [ ] **`1.0.8+26.3`** (2026-08-26) - Initial port and release targeting Minecraft 26.3.

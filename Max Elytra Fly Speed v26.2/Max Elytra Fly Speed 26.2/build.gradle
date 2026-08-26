@@ -36,6 +36,14 @@ dependencies {
     runtimeOnly "me.shedaniel.cloth:cloth-config-fabric:26.1.154"
     compileOnly "com.terraformersmc:modmenu:18.0.0-beta.1"
     runtimeOnly "com.terraformersmc:modmenu:18.0.0-beta.1"
+
+    // Testing
+    testImplementation "org.junit.jupiter:junit-jupiter:5.11.4"
+    testRuntimeOnly "org.junit.platform:junit-platform-launcher"
+}
+
+test {
+    useJUnitPlatform()
 }
 
 processResources {
