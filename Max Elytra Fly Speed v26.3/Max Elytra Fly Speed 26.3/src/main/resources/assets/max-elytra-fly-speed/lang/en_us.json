@@ -5,5 +5,5 @@
   "gamerule.max-elytra-fly-speed.elytra_initial_boost_speed": "Initial Boost Speed",
   "gamerule.max-elytra-fly-speed.elytra_initial_boost_speed.description": "Speed threshold (Blocks/Second) up to which snappy vanilla rocket boost is applied. Default is 30.",
   "gamerule.max-elytra-fly-speed.elytra_high_speed_acceleration": "High Speed Acceleration",
-  "gamerule.max-elytra-fly-speed.elytra_high_speed_acceleration.description": "Gradual acceleration rate (permille) above initial boost speed. Default is 15 (0.015 blocks/tick)."
+  "gamerule.max-elytra-fly-speed.elytra_high_speed_acceleration.description": "High-speed acceleration rate percentage above initial boost speed. Default is 15 (15% per tick)."
 }

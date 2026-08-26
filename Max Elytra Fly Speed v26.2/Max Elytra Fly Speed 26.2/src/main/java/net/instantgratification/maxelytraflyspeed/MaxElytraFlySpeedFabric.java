@@ -45,7 +45,7 @@ public class MaxElytraFlySpeedFabric implements ModInitializer {
 
         ELYTRA_HIGH_SPEED_ACCELERATION = DynamicGameRuleManager.integerRule(MOD_ID + ":elytra_high_speed_acceleration", CUSTOM_CATEGORY, 15)
             .name("High Speed Acceleration")
-            .description("Gradual acceleration rate (permille) above initial speed. Default: 15 (0.015 blocks/tick).")
+            .description("High-speed acceleration rate percentage above initial speed. Default: 15 (15% per tick).")
             .min(1)
             .max(1000)
             .register();

@@ -5,6 +5,7 @@ package net.instantgratification.maxelytraflyspeed.mixin;
 // Verified against: FireworkRocketEntity.java (26.2+)
 
 import net.instantgratification.maxelytraflyspeed.MaxElytraFlySpeedFabric;
+import net.instantgratification.maxelytraflyspeed.util.RocketBoostHelper;
 import net.dasik.social.api.gamerule.DynamicGameRuleManager;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.FireworkRocketEntity;
@@ -36,31 +37,12 @@ public abstract class FireworkRocketEntityMixin {
         double initialBoostSpeedTicks = initialBoostSpeedBps / 20.0;
 
         int highAccPermille = DynamicGameRuleManager.getInt(entity.level(), MaxElytraFlySpeedFabric.ELYTRA_HIGH_SPEED_ACCELERATION);
-        double highAcc = highAccPermille / 1000.0;
+        double highAccFactor = Math.max(0.05, highAccPermille / 100.0);
 
-        double currentSpeed = oldMovement.length();
         Vec3 lookAngle = entity.getLookAngle();
-        Vec3 targetBoost;
-
-        if (currentSpeed < initialBoostSpeedTicks) {
-            // Snappy vanilla acceleration up to the configured initial boost speed threshold
-            targetBoost = lookAngle.scale(0.1).add(
-                lookAngle.scale(initialBoostSpeedTicks).subtract(oldMovement).scale(0.5)
-            );
-        } else {
-            // Gradual acceleration with drag compensation above initial boost speed threshold
-            double gravity = entity.getGravity();
-            double dragLossV = Math.min(0.02, gravity / maxSpeedTicks);
-            double dragLossH = Math.min(0.01, dragLossV * 0.5);
-            Vec3 dragCompensation = new Vec3(oldMovement.x * dragLossH, oldMovement.y * dragLossV, oldMovement.z * dragLossH);
-            targetBoost = dragCompensation.add(lookAngle.scale(highAcc));
-        }
-
-        Vec3 targetMovement = oldMovement.add(targetBoost);
-        double targetSpeed = targetMovement.length();
-        if (targetSpeed > maxSpeedTicks && targetSpeed > 0.0) {
-            targetMovement = targetMovement.scale(maxSpeedTicks / targetSpeed);
-        }
+        Vec3 targetMovement = RocketBoostHelper.calculateBoostMovement(
+            oldMovement, lookAngle, initialBoostSpeedTicks, maxSpeedTicks, highAccFactor
+        );
         entity.setDeltaMovement(targetMovement);
     }
 }
