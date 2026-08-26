@@ -1,0 +1,9 @@
+{
+  "gamerule.category.max-elytra-fly-speed.max-elytra-fly-speed": "Максимальная скорость элитр",
+  "gamerule.max-elytra-fly-speed.max_elytra_fly_speed": "Макс. скорость (блоков/сек)",
+  "gamerule.max-elytra-fly-speed.max_elytra_fly_speed.description": "Абсолютная максимальная скорость полета на элитрах в блоках/сек. По умолчанию: 50 блоков/сек.",
+  "gamerule.max-elytra-fly-speed.elytra_initial_boost_speed": "Начальная скорость ускорения",
+  "gamerule.max-elytra-fly-speed.elytra_initial_boost_speed.description": "Порог скорости (блоков/сек), до которого применяется быстрое ванильное ускорение ракетой. По умолчанию: 30.",
+  "gamerule.max-elytra-fly-speed.elytra_high_speed_acceleration": "Высокоскоростное ускорение",
+  "gamerule.max-elytra-fly-speed.elytra_high_speed_acceleration.description": "Процентная скорость ускорения при превышении начального порога. По умолчанию: 15 (15% за такт)."
+}
