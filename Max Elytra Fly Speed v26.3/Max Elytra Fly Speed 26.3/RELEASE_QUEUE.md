@@ -4,6 +4,7 @@ This file tracks which built versions (from `/Archive/builds/`) have been manual
 
 ## 🚀 Published & Backlog Queue
 
+- [ ] **`1.0.20+26.3`** (2026-08-26) - Portuguese (pt_br, pt_pt) Localization.
 - [ ] **`1.0.19+26.3`** (2026-08-26) - Japanese (ja_jp) Localization.
 - [ ] **`1.0.18+26.3`** (2026-08-26) - Indonesian (id_id) Localization.
 - [ ] **`1.0.17+26.3`** (2026-08-26) - German (de_de) Localization.
