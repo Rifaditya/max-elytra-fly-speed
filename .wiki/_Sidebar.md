@@ -3,7 +3,8 @@
 #### 🌐 Languages
 * [[🇺🇸 English|Home]] | [[🇨🇳 简体中文|zh_cn-Home]] | [[🇭🇰 繁體中文|zh_tw-Home]]
 * [[🇷🇺 Русский|ru_ru-Home]] | [[🇪🇸 Español|es_es-Home]] | [[🇩🇪 Deutsch|de_de-Home]]
-* [[🇯🇵 日本語|ja_jp-Home]] | [[🇮🇩 Bahasa Indonesia|id_id-Home]]
+* [[🇫🇷 Français|fr_fr-Home]] | [[🇧🇷 Português|pt_br-Home]] | [[🇯🇵 日本語|ja_jp-Home]]
+* [[🇮🇩 Bahasa Indonesia|id_id-Home]] | [[🇰🇷 한국어|ko_kr-Home]]
 
 ---
 
@@ -84,6 +85,26 @@
 </details>
 
 <details>
+<summary><b>🇫🇷 Français (French)</b></summary>
+
+* [[🏠 Portail Principal|fr_fr-Home]]
+* [[👉 Documentation Minecraft 26.2|26.2-Home]]
+* [[👉 Documentation Minecraft 26.3|26.3-Home]]
+* [[📋 Matrice de Compatibilité|Version-Compatibility]]
+* [[🛠️ Environnement Développeur & Tests|Developer-Setup-and-Building]]
+</details>
+
+<details>
+<summary><b>🇧🇷 Português (Portuguese)</b></summary>
+
+* [[🏠 Portal Principal|pt_br-Home]]
+* [[👉 Documentação Minecraft 26.2|26.2-Home]]
+* [[👉 Documentação Minecraft 26.3|26.3-Home]]
+* [[📋 Matriz de Compatibilidade|Version-Compatibility]]
+* [[🛠️ Configuração de Desenvolvedor & Testes|Developer-Setup-and-Building]]
+</details>
+
+<details>
 <summary><b>🇯🇵 日本語 (Japanese)</b></summary>
 
 * [[🏠 メインポータル|ja_jp-Home]]
@@ -101,4 +122,14 @@
 * [[👉 Dokumentasi Minecraft 26.3|26.3-Home]]
 * [[📋 Matriks Kompatibilitas Versi|Version-Compatibility]]
 * [[🛠️ Penyiapan & Pengujian Pengembang|Developer-Setup-and-Building]]
+</details>
+
+<details>
+<summary><b>🇰🇷 한국어 (Korean)</b></summary>
+
+* [[🏠 기본 포털|ko_kr-Home]]
+* [[👉 Minecraft 26.2 문서|26.2-Home]]
+* [[👉 Minecraft 26.3 문서|26.3-Home]]
+* [[📋 버전 호환성 매트릭스|Version-Compatibility]]
+* [[🛠️ 개발자 빌드 및 테스트|Developer-Setup-and-Building]]
 </details>
