@@ -4,7 +4,7 @@ This file tracks which built versions (from `/Archive/builds/`) have been manual
 
 ## 🚀 Published & Backlog Queue
 
-- [ ] **`1.0.22+26.3`** (2026-08-26) - Korean (ko_kr) Localization.
+- [x] **`1.0.22+26.3`** (2026-08-26) - Korean (ko_kr) Localization.
 - [ ] **`1.0.21+26.3`** (2026-08-26) - French (fr_fr, fr_ca) Localization.
 - [ ] **`1.0.20+26.3`** (2026-08-26) - Portuguese (pt_br, pt_pt) Localization.
 - [ ] **`1.0.19+26.3`** (2026-08-26) - Japanese (ja_jp) Localization.
@@ -23,11 +23,11 @@ This file tracks which built versions (from `/Archive/builds/`) have been manual
 - [x] **`1.0.7+26.2`** (2026-07-22) - Forward Compatibility & Version Guard.
 - [x] **`1.0.6`** (2026-07-20) - Increased default max speed limit to 50 blocks/sec and added vanilla equipped Elytra icon.
 - [x] **`1.0.5`** (2026-07-16) - Split firework boost logic: vanilla math up to 30 blocks/sec, gradual drag-compensated math above.
-- [x] **`1.0.4`** (2026-07-16) - Dynamic drag coefficient and smoother firework boost acceleration. Allows diving down to build speed.
-- [x] **`1.0.3`** (2026-07-16) - Gradual Elytra acceleration curve with drag compensation matching powered rails (0.06 blocks/tick acceleration).
-- [x] **`1.0.2`** (2026-07-16) - Gradual Elytra acceleration curve for rocket boosts. Prevents jarring instant acceleration at high speed caps.
-- [x] **`1.0.1`** (2026-07-16) - Fixed category header color, renamed rule label, and scaled thrust force by limit ratio.
-- [x] **`1.0.0`** (2026-07-16) - Initial release targeting Minecraft 26.2 stable. Includes sovereign GameRule for Elytra speed clamping.
+- [ ] **`1.0.4`** (2026-07-16) - Dynamic drag coefficient and smoother firework boost acceleration. Allows diving down to build speed.
+- [ ] **`1.0.3`** (2026-07-16) - Gradual Elytra acceleration curve with drag compensation matching powered rails (0.06 blocks/tick acceleration).
+- [ ] **`1.0.2`** (2026-07-16) - Gradual Elytra acceleration curve for rocket boosts. Prevents jarring instant acceleration at high speed caps.
+- [ ] **`1.0.1`** (2026-07-16) - Fixed category header color, renamed rule label, and scaled thrust force by limit ratio.
+- [ ] **`1.0.0`** (2026-07-16) - Initial release targeting Minecraft 26.2 stable. Includes sovereign GameRule for Elytra speed clamping.
 
 ## 📌 Future Refinements Backlog
 

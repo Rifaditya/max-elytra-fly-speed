@@ -4,7 +4,7 @@ This file tracks which built versions (from `/Archive/builds/`) have been manual
 
 ## 🚀 Published & Backlog Queue
 
-- [ ] **`1.0.22+26.2`** (2026-08-26) - Korean (ko_kr) Localization.
+- [x] **`1.0.22+26.2`** (2026-08-26) - Korean (ko_kr) Localization.
 - [ ] **`1.0.21+26.2`** (2026-08-26) - French (fr_fr, fr_ca) Localization.
 - [ ] **`1.0.20+26.2`** (2026-08-26) - Portuguese (pt_br, pt_pt) Localization.
 - [ ] **`1.0.19+26.2`** (2026-08-26) - Japanese (ja_jp) Localization.
