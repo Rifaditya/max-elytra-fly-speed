@@ -6,13 +6,22 @@ package net.instantgratification.maxelytraflyspeed.config;
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;
 import net.fabricmc.loader.api.FabricLoader;
+import net.minecraft.client.gui.screens.Screen;
 
 public class ModMenuIntegration implements ModMenuApi {
     @Override
     public ConfigScreenFactory<?> getModConfigScreenFactory() {
-        if (FabricLoader.getInstance().isModLoaded("cloth-config")) {
-            return ClothConfigScreenHelper.createFactory();
-        }
-        return parent -> null;
+        return parent -> {
+            if (FabricLoader.getInstance().isModLoaded("cloth-config") ||
+                FabricLoader.getInstance().isModLoaded("cloth_config")) {
+                try {
+                    Class<?> helperClass = Class.forName("net.instantgratification.maxelytraflyspeed.config.ClothConfigScreenHelper");
+                    return (Screen) helperClass.getMethod("createScreen", Screen.class).invoke(null, parent);
+                } catch (Throwable t) {
+                    // Fall back gracefully if helper fails to load
+                }
+            }
+            return null;
+        };
     }
 }
