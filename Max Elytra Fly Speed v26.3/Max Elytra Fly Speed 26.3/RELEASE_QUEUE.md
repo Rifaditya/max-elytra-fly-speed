@@ -4,6 +4,7 @@ This file tracks which built versions (from `/Archive/builds/`) have been manual
 
 ## 🚀 Published & Backlog Queue
 
+- [ ] **`1.0.23+26.3`** (2026-09-05) - Fix Cloth Config NPE & Add Category with Ko-fi Support Banner.
 - [x] **`1.0.22+26.3`** (2026-08-26) - Korean (ko_kr) Localization.
 - [x] **`1.0.21+26.3`** (2026-08-26) - French (fr_fr, fr_ca) Localization.
 - [x] **`1.0.20+26.3`** (2026-08-26) - Portuguese (pt_br, pt_pt) Localization.

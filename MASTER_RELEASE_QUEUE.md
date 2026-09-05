@@ -1,8 +1,8 @@
 # 🎛️ Master Release Queue: Instant Gratification — Max Elytra Fly Speed
 
 > **Mod Project Master Ground-Truth Document**  
-> *Last Synchronized: 2026-09-01*  
-> **Modrinth ID**: `x8quK158` | **CurseForge ID**: `1617614` | **Lead SemVer**: `1.0.22`
+> *Last Synchronized: 2026-09-05*  
+> **Modrinth ID**: `x8quK158` | **CurseForge ID**: `1617614` | **Lead SemVer**: `1.0.23`
 
 ---
 
