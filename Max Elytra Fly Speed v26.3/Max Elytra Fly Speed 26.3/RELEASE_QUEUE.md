@@ -4,6 +4,7 @@ This file tracks which built versions (from `/Archive/builds/`) have been manual
 
 ## 🚀 Published & Backlog Queue
 
+- [ ] **`1.0.25+26.3`** (2026-09-05) - - **YACL v3 Migration**: Replaced Cloth Config screen with YetAnotherConfigLib v3. - - **Ko-fi Support Integration**: Added top-pinned solo developer support button linking directly to Ko-fi in config screen.
 - [ ] **`1.0.24+26.3`** (2026-09-05) - Shield ModMenu with Deferred Reflection Classloading.
 - [ ] **`1.0.23+26.3`** (2026-09-05) - Fix Cloth Config NPE & Add Category with Ko-fi Support Banner.
 - [x] **`1.0.22+26.3`** (2026-08-26) - Korean (ko_kr) Localization.
