@@ -6,7 +6,7 @@ This file tracks which built versions (from `/Archive/builds/`) have been manual
 
 - [ ] **`1.0.25+26.2`** (2026-09-05) - - **YACL v3 Migration**: Replaced Cloth Config screen with YetAnotherConfigLib v3. - - **Ko-fi Support Integration**: Added top-pinned solo developer support button linking directly to Ko-fi in config screen.
 - [ ] **`1.0.24+26.2`** (2026-09-05) - Shield ModMenu with Deferred Reflection Classloading.
-- [ ] **`1.0.23+26.2`** (2026-09-05) - Fix Cloth Config NPE & Add Category with Ko-fi Support Banner.
+- [x] **`1.0.23+26.2`** (2026-09-05) - Fix Cloth Config NPE & Add Category with Ko-fi Support Banner.
 - [x] **`1.0.22+26.2`** (2026-08-26) - Korean (ko_kr) Localization.
 - [x] **`1.0.21+26.2`** (2026-08-26) - French (fr_fr, fr_ca) Localization.
 - [x] **`1.0.20+26.2`** (2026-08-26) - Portuguese (pt_br, pt_pt) Localization.
