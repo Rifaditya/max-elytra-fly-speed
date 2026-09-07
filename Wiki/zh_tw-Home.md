@@ -16,8 +16,8 @@ Max Elytra Fly Speed 嚴格遵循 **1 Jar 1 Version（單一 Jar 對應單一版
 
 | 遊戲版本 | 狀態 | 目標子項目 | 專用文檔入口 |
 | :--- | :---: | :--- | :---: |
-| **Minecraft 26.2** | 🟢 活躍維護 | `Max Elytra Fly Speed v26.2` | [[👉 進入 MC 26.2 Wiki|26.2-Home]] |
-| **Minecraft 26.3** | 🟢 活躍維護 | `Max Elytra Fly Speed v26.3` | [[👉 進入 MC 26.3 Wiki|26.3-Home]] |
+| **Minecraft 26.2** | 🟢 活躍維護 | `Max Elytra Fly Speed v26.2` | [[👉 進入 MC 26.2 Wiki|zh_tw-26.2-Home]] |
+| **Minecraft 26.3** | 🟢 活躍維護 | `Max Elytra Fly Speed v26.3` | [[👉 進入 MC 26.3 Wiki|zh_tw-26.3-Home]] |
 
 ---
 

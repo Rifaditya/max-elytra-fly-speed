@@ -16,8 +16,8 @@ Max Elytra Fly Speed は **1 Jar 1 Version（1バージョン1JAR）** ポリシ
 
 | Minecraftバージョン | ステータス | サブプロジェクト | ドキュメント |
 | :--- | :---: | :--- | :---: |
-| **Minecraft 26.2** | 🟢 開発中・提供中 | `Max Elytra Fly Speed v26.2` | [[👉 MC 26.2 Wiki を開く|26.2-Home]] |
-| **Minecraft 26.3** | 🟢 開発中・提供中 | `Max Elytra Fly Speed v26.3` | [[👉 MC 26.3 Wiki を開く|26.3-Home]] |
+| **Minecraft 26.2** | 🟢 開発中・提供中 | `Max Elytra Fly Speed v26.2` | [[👉 MC 26.2 Wiki を開く|ja_jp-26.2-Home]] |
+| **Minecraft 26.3** | 🟢 開発中・提供中 | `Max Elytra Fly Speed v26.3` | [[👉 MC 26.3 Wiki を開く|ja_jp-26.3-Home]] |
 
 ---
 

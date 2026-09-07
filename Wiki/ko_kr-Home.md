@@ -16,8 +16,8 @@ Max Elytra Fly Speed는 **1 Jar 1 Version (1 버전 1 JAR)** 정책을 엄격히
 
 | 마인크래프트 버전 | 상태 | 대상 서브프로젝트 | 전용 문서 포털 |
 | :--- | :---: | :--- | :---: |
-| **Minecraft 26.2** | 🟢 활성 유지 | `Max Elytra Fly Speed v26.2` | [[👉 MC 26.2 위키 열기|26.2-Home]] |
-| **Minecraft 26.3** | 🟢 활성 유지 | `Max Elytra Fly Speed v26.3` | [[👉 MC 26.3 위키 열기|26.3-Home]] |
+| **Minecraft 26.2** | 🟢 활성 유지 | `Max Elytra Fly Speed v26.2` | [[👉 MC 26.2 위키 열기|ko_kr-26.2-Home]] |
+| **Minecraft 26.3** | 🟢 활성 유지 | `Max Elytra Fly Speed v26.3` | [[👉 MC 26.3 위키 열기|ko_kr-26.3-Home]] |
 
 ---
 

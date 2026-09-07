@@ -16,8 +16,8 @@
 
 | Версия Minecraft | Статус | Подпроект | Документация |
 | :--- | :---: | :--- | :---: |
-| **Minecraft 26.2** | 🟢 Активно | `Max Elytra Fly Speed v26.2` | [[👉 Открыть MC 26.2 Wiki|26.2-Home]] |
-| **Minecraft 26.3** | 🟢 Активно | `Max Elytra Fly Speed v26.3` | [[👉 Открыть MC 26.3 Wiki|26.3-Home]] |
+| **Minecraft 26.2** | 🟢 Активно | `Max Elytra Fly Speed v26.2` | [[👉 Открыть MC 26.2 Wiki|ru_ru-26.2-Home]] |
+| **Minecraft 26.3** | 🟢 Активно | `Max Elytra Fly Speed v26.3` | [[👉 Открыть MC 26.3 Wiki|ru_ru-26.3-Home]] |
 
 ---
 

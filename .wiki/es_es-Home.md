@@ -16,8 +16,8 @@ Max Elytra Fly Speed sigue estrictamente la política de **1 Jar 1 Versión**:
 
 | Versión de Minecraft | Estado | Subproyecto | Documentación |
 | :--- | :---: | :--- | :---: |
-| **Minecraft 26.2** | 🟢 Activo | `Max Elytra Fly Speed v26.2` | [[👉 Entrar a MC 26.2 Wiki|26.2-Home]] |
-| **Minecraft 26.3** | 🟢 Activo | `Max Elytra Fly Speed v26.3` | [[👉 Entrar a MC 26.3 Wiki|26.3-Home]] |
+| **Minecraft 26.2** | 🟢 Activo | `Max Elytra Fly Speed v26.2` | [[👉 Entrar a MC 26.2 Wiki|es_es-26.2-Home]] |
+| **Minecraft 26.3** | 🟢 Activo | `Max Elytra Fly Speed v26.3` | [[👉 Entrar a MC 26.3 Wiki|es_es-26.3-Home]] |
 
 ---
 
