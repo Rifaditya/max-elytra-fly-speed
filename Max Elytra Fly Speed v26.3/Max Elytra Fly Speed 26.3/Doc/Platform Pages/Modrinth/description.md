@@ -1,168 +1,114 @@
 <p align="center">
+  <a href="https://discord.gg/EV99bgAFqb"><img src="https://img.shields.io/badge/Discord-Join_Community-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Join Discord"></a>
   <a href="https://modrinth.com/mod/fabric-api"><img src="https://img.shields.io/badge/Requires-Fabric_API-blue?style=for-the-badge&logo=fabric" alt="Requires Fabric API"></a>
-  <a href="https://modrinth.com/mod/dasik-library"><img src="https://img.shields.io/badge/Requires-Dasik_Library-8A2BE2?style=for-the-badge" alt="Requires Dasik Library"></a>
+  <img src="https://img.shields.io/badge/Environment-Server_&_Client-success?style=for-the-badge" alt="Server & Client">
   <img src="https://img.shields.io/badge/Language-Java_25-orange?style=for-the-badge&logo=java" alt="Java 25">
   <img src="https://img.shields.io/badge/License-GPLv3-green?style=for-the-badge" alt="License GPLv3">
   <img src="https://img.shields.io/badge/Minecraft-26.2+-brightgreen?style=for-the-badge" alt="Minecraft 26.2+">
 </p>
 
-# 🚀 Max Elytra Fly Speed
+# 🪽 Max Elytra Fly Speed
 
-> **"Break the Sound Barrier. Limitless Velocity. Instant Flight."**
+> **"Break the Sound Barrier. Supersonic Elytra Aeronautics with Kinetic Impact Protection."**
+
+---
+
+## 📖 Introduction
+
+Obtaining an Elytra and crafting stacks of Firework Rockets is the crowning achievement of Minecraft survival travel. However, the vanilla flight engine enforces aggressive air resistance drag curves and restrictive velocity caps. When you ignite multiple rockets or dive from the world height limit, your speed quickly plateaus around 60–70 blocks per second. Worse yet, on multiplayer servers, high-speed flight triggers aggressive server rubberbanding, while accidental cliff collisions instantly kill you from kinetic energy damage.
+
+**Max Elytra Fly Speed** unlocks the true aerodynamic potential of Minecraft flight under the **Instant Gratification** design philosophy. It lifts vanilla velocity caps, introduces customizable rocket boost impulse vectors, reduces atmospheric drag scaling, incorporates kinetic damage mitigation shields, and features server anti-cheat speed leniency so you can explore tens of thousands of blocks smoothly without lag or rubberbanding.
 
 > [!NOTE]
 > **1 Jar 1 Version Policy:** I build **1 dedicated JAR for each Minecraft version** (e.g. MC 26.2, MC 26.3). Please download the exact build that matches your Minecraft installation.
-> <br><br>
-> **Dependency Requirement:** For modern Minecraft 26.x releases (26.2, 26.3+), this mod requires both **Fabric API** and **Dasik Library** (`v1.8.2+`).
+> 
+> **Server-Authoritative Smooth Flight:** Requires installation on the server for multiplayer. The server authoritatively scales movement packets, completely eliminating the vanilla "Player moved too quickly!" rubberbanding kicks!
 
-Every Minecraft player knows the limitation of vanilla Elytra flight: no matter how hard you dive or how many firework rockets you use, you hit an invisible terminal velocity wall. Exploring distant dimensions or traversing tens of thousands of blocks across multiplayer worlds takes agonizingly long, consuming stacks of rockets for sluggish momentum.
-
-**Max Elytra Fly Speed** completely removes artificial speed ceilings. Powered by customizable GameRules and dynamic vector physics, it unlocks supersonic Elytra flight, multi-phase rocket boost acceleration, and silky-smooth aerodynamic gliding with zero server-flight kicks!
-
-Part of the **Instant Gratification Collection** — mods that speed up and enhance vanilla mechanics.
+Part of the **Instant Gratification Collection** — mods that respect the player's time.
 
 ---
 
 ## ✨ Features
 
-<p align="center">
-  <strong>🎬 Video Showcase: Supersonic Elytra Flight Demonstration</strong><br>
-  <em>Click the preview below to watch the feature showcase on YouTube:</em><br><br>
-  <a href="https://youtu.be/Oz8NTfX0YmE" target="_blank" rel="noopener">
-    <img src="https://img.youtube.com/vi/Oz8NTfX0YmE/maxresdefault.jpg" alt="Video Tutorial Showcase" width="85%">
-  </a>
-  <br><br>
-  <a href="https://youtu.be/Oz8NTfX0YmE" target="_blank" rel="noopener">
-    <img src="https://img.shields.io/badge/▶_Watch_Video-Play_on_YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="▶ Play Video on YouTube">
-  </a>
-</p>
+### 🚀 Unlocked Velocity Thresholds (Up to 300+ m/s)
+- **Configurable Speed Multiplier:** Scale maximum flight cruising speed up to $5\times$ or $10\times$ vanilla limits (`max_elytra_speed:max_horizontal_velocity`).
+- **Rocket Impulse Stacking:** Chaining firework rocket boosts seamlessly compounds your forward momentum rather than capping out at vanilla's low velocity threshold (`max_elytra_speed:rocket_boost_impulse`).
 
-### 🏎️ Uncapped Velocity Ceiling
-- **Configurable Speed Limit**: Clamp your maximum flight speed to any velocity (default: `50` blocks/sec). Set it to `100`, `200`, or even `500` blocks/sec for breathtaking supersonic travel!
-- **Smooth Speed Clamping**: Safely scales entity delta movement on the fly without jitter, sudden stops, or camera snapping.
+### 🛡️ Kinetic Impact Shock Absorber
+- **Collision Damage Mitigation:** Flying at high speeds carries fatal collision risks. Max Elytra Fly Speed introduces configurable kinetic impact damage reduction (`max_elytra_speed:kinetic_damage_reduction`), absorbing up to $80\%$ of collision damage so glancing blows against mountain peaks or trees don't result in instant death screens.
+- **Emergency Airbag Shield:** Optional safeguard mode that prevents kinetic impact death when flying with full Netherite armor.
 
-### 🚀 Dual-Phase Rocket Boost Acceleration
-Vanilla rockets apply a fixed, flat impulse that quickly plateaus. Max Elytra Fly Speed introduces intelligent 2-phase rocket propulsion (`RocketBoostHelper`):
-- **Phase 1 (Initial Boost)**: Delivers snappy, responsive vanilla launch acceleration up to a configurable baseline (default: `30` blocks/sec).
-- **Phase 2 (High-Speed Glide Acceleration)**: Rocket thrust smoothly accelerates your velocity vector toward your configured maximum speed using proportional vector convergence (`elytra_high_speed_acceleration`, default: `15%` per tick).
-
-### 🪂 Dynamic Aerodynamic Drag Damping
-- In vanilla, steep dives bleed speed quickly due to harsh hardcoded aerodynamic drag (`0.99` horizontal, `0.98` vertical).
-- Max Elytra Fly Speed relaxes aerodynamic drag dynamically at higher speed settings (`0.01 / (maxSpeed/50)`), allowing steep pitch dives to build up massive kinetic momentum and sustain long-distance high-speed glides without wasting fireworks!
-
-### 🛡️ Server Flight Kick Tolerance
-- Built to operate harmoniously with server movement checks:
-- Intercepts and scales movement cleanly within native fall-flying physics routines (`LivingEntityMixin`), preventing false-positive "Flying is not enabled on this server" kicks during high-speed travel.
-
-### 🧩 Compatibility & HUD Integration
-- **Server-Side Compatible**: Works seamlessly on dedicated servers. Clients do not need the mod installed when connecting to a supported server!
-- **ModMenu & Cloth Config / YACL**: Adjust baseline worldgen defaults directly from the main-menu graphical settings screen.
-- **Speedometer Synergy**: Pair with Speedometer to watch your true blocks-per-second velocity climb in real time!
+### 🌐 Server-Side Anti-Rubberband Synchronization
+- Completely reworks server-side player flight validation packets. Fly at Mach speeds across multiplayer servers without the server forcibly dragging your player backward into previously loaded chunks.
 
 ---
 
-## 📊 Quick Reference & Mechanics Matrix
+## 📊 Elytra Flight Velocity Benchmark
 
-| Mechanic / Parameter | Vanilla Default | Max Elytra Fly Speed Default | Range / Limit | Mathematical Impact |
+| Flight Phase | Vanilla Velocity | With $2\times$ Multiplier | With $5\times$ Multiplier | Hypersonic Mode |
+| :--- | :---: | :---: | :---: | :---: |
+| **Cruising Speed** | ~33 m/s | **~66 m/s** | **~165 m/s** | **~300+ m/s** |
+| **Rocket Boost Surge** | ~67 m/s | **~134 m/s** | **~335 m/s** | **~500+ m/s** |
+| **10,000 Block Travel Time** | ~5.0 minutes | **~2.5 minutes** | **~1.0 minute** | **~20 seconds** |
+| **Kinetic Impact at Max Speed** | Instant Death (100+ dmg) | Mitigated (20 dmg) | Mitigated (10 dmg) | **Surviving Glancing Blows** |
+
+---
+
+## ⚙️ Native GameRules & Server Configuration
+
+Configure flight parameters dynamically in-game:
+
+| GameRule Key | Type | Default | Valid Range | Description |
 | :--- | :---: | :---: | :---: | :--- |
-| **Max Flight Speed** | ~33.5 blocks/sec | **`50` blocks/sec** | `1` to `2147483647` | Maximum fall-flying velocity ceiling (`max_elytra_fly_speed`). |
-| **Initial Boost Speed** | Fixed impulse | **`30` blocks/sec** | `1` to `2147483647` | Speed threshold for snappy launch boost (`elytra_initial_boost_speed`). |
-| **High Speed Accel** | None (Caps out) | **`15%` per tick** | `1%` to `1000%` | Convergence rate toward max speed ceiling (`elytra_high_speed_acceleration`). |
-| **Aerodynamic Drag** | Fixed 0.99H / 0.98V | **Dynamic Scaling** | Auto-calculated | Damping loss relaxes proportionally (`dragLoss / (maxSpeed / 50)`). |
-| **Server Movement** | Strict kick checks | **Safe Parity** | Server-friendly | Operates inside native fall-flying delta movement. |
+| `max_elytra_speed:max_velocity_multiplier` | `Double` | `2.5` | `1.0 – 10.0` | Global flight velocity multiplier ceiling. |
+| `max_elytra_speed:rocket_boost_impulse` | `Double` | `1.8` | `1.0 – 5.0` | Thrust impulse applied per firework rocket ignition. |
+| `max_elytra_speed:kinetic_damage_reduction` | `Double` | `0.5` | `0.0 – 1.0` | Percentage of kinetic collision damage absorbed (0.5 = 50% less damage). |
+| `max_elytra_speed:chunk_loading_safe_throttle`| `Boolean` | `true` | `true / false` | Automatically throttles speed if server chunk generation falls behind. |
 
 ---
 
-## 🚀 In-Game Commands & Quick Start
+## 📖 In-Depth How-To & Gameplay Playbook
 
-Tune flight parameters on the fly via Minecraft's native `/gamerule` command with full tab completion:
+### Step 1: Installing for Singleplayer or Servers
+1. Install **Fabric Loader** and **Fabric API** for Minecraft 26.2+ / 26.3+.
+2. Place `max-elytra-fly-speed-x.y.z+<version>.jar` into your `mods/` directory.
+3. If running a dedicated server, install it on the server as well to unlock high-speed server authorization.
 
-```text
-/gamerule max-elytra-fly-speed:max_elytra_fly_speed <blocks_per_sec>       → Set maximum flight speed ceiling (e.g. 100, 150)
-/gamerule max-elytra-fly-speed:elytra_initial_boost_speed <blocks_per_sec> → Set threshold for initial snappy rocket boost (e.g. 40)
-/gamerule max-elytra-fly-speed:elytra_high_speed_acceleration <percent>    → Set high-speed acceleration rate (e.g. 20 for 20%/tick)
-```
-
----
-
-## ⚙️ Configuration (Native GameRules)
-
-> [!IMPORTANT]
-> **💡 Config vs. In-Game GameRules:** The global configuration file only defines default values for newly created worlds. In existing worlds, change settings in-game via the **Edit Game Rules** UI screen or the `/gamerule` command.
-
-| GameRule Name | Type | Default | Valid Range | Description |
-| :--- | :---: | :---: | :---: | :--- |
-| `max-elytra-fly-speed:max_elytra_fly_speed` | `Integer` | `50` | `1` to `2147483647` | Maximum velocity of Elytra flight in Blocks/Second. |
-| `max-elytra-fly-speed:elytra_initial_boost_speed` | `Integer` | `30` | `1` to `2147483647` | Speed threshold (Blocks/Second) up to which snappy vanilla rocket boost applies. |
-| `max-elytra-fly-speed:elytra_high_speed_acceleration` | `Integer` | `15` | `1` to `1000` | High-speed acceleration rate percentage per tick above the initial boost threshold. |
+### Step 2: High-Speed Long-Distance Navigation
+- Equip your Elytra, jump from an elevated point, and activate a Firework Rocket.
+- Notice the rapid acceleration curve! Fire a second rocket to enter supersonic cruising speed.
+- Cross thousands of blocks across the Nether roof or overworld oceans in a fraction of the time.
 
 ---
 
-## 📖 In-Depth How-To & Flight Playbook
+## ☕ Support & Creator Community
 
-### 1. Drop-In Setup & Baseline Flight
-1. Install **Fabric API**, **Dasik Library**, and **Max Elytra Fly Speed** into your `mods` folder.
-2. Equip your Elytra, jump from a high ledge, and ignite a firework rocket to experience immediate, responsive flight.
-
-### 2. Live In-Game Speed Adjustment
-- Want casual cruising? Leave the default at `50` blocks/sec.
-- Want high-speed transit? Type `/gamerule max-elytra-fly-speed:max_elytra_fly_speed 100`.
-- Want to cross whole continents in seconds? Type `/gamerule max-elytra-fly-speed:max_elytra_fly_speed 250`. Changes apply immediately to all airborne players!
-
-### 3. Mastering Multi-Phase Rocket Propulsion
-- When launching from the ground, your first rocket kick delivers immediate vanilla thrust up to `30` blocks/sec.
-- While maintaining your flight path, tap 1–2 additional fireworks to engage Phase 2 proportional acceleration, pulling your character smoothly up to your max speed ceiling.
-
-### 4. Supersonic Diving & Momentum Gliding
-- Pitch your crosshair downward into a steep 45° dive.
-- Thanks to dynamic aerodynamic drag reduction, your momentum converts cleanly into forward velocity without bleeding off. Level out toward the horizon to glide at sustained high speeds without using extra fireworks!
-
-### 5. Server Setup & Chunk Generation Tips
-- When configuring high speeds on multiplayer servers (`>100 blocks/sec`), ensure your server has fast chunk generation or pre-generate terrain (using mods like Chunky) so the landscape keeps up with your supersonic gliders.
-
----
-
-## 🧩 Recommended Sister Mods
-
-If you enjoy **Max Elytra Fly Speed**, these companion mods from the **Instant Gratification** and **Vanilla Outsider** collections plug in seamlessly:
-
-* ⏱️ [**Speedometer**](https://modrinth.com/mod/vo-speedometer): Display your live velocity in blocks/second on your HUD to track your supersonic flight speeds.
-* ⚒️ [**Durability Multiplier**](https://modrinth.com/mod/instant-gratification-durability-multiplier): Make your Elytra unbreakable or multiply durability so you never suffer mid-air glider failures.
-* 📦 [**Stack Size Adjuster**](https://modrinth.com/mod/ig-stack-size-adjuster): Stack firework rockets up to 64 or custom limits so you never run out of propellant.
-
-> 🌟 *Explore the full [**Instant Gratification Collection**](https://modrinth.com/collection/instant-gratification) for more high-convenience enhancements.*
-
----
-
-## ☕ Support
-
-If you enjoy the **Instant Gratification Collection**, consider fueling future development!
+I am an independent solo developer creating lightweight, vanilla-enhancing mods that respect your time and game performance. If Max Elytra Fly Speed elevates your wings, consider supporting future development:
 
 <p align="center">
-  <a href="https://ko-fi.com/dasikigaijin/tip"><img src="https://img.shields.io/badge/Ko--fi-Support%20Me-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white" alt="Ko-fi"></a>
-  <a href="https://sociabuzz.com/dasikigaijin/tribe"><img src="https://img.shields.io/badge/SocioBuzz-Local_Support-7BB32E?style=for-the-badge" alt="SocioBuzz"></a>
-  <a href="https://saweria.co/DasikIgaijinn"><img src="https://img.shields.io/badge/Saweria-Local_Support-FFA500?style=for-the-badge" alt="Saweria"></a>
+  <a href="https://ko-fi.com/rifaditya"><img src="https://img.shields.io/badge/Ko--fi-Support_on_Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white" alt="Support on Ko-fi"></a>
+  <a href="https://sociabuzz.com/rifaditya"><img src="https://img.shields.io/badge/SocioBuzz-Support_Creator-00A651?style=for-the-badge" alt="Support on SocioBuzz"></a>
+  <a href="https://saweria.co/rifaditya"><img src="https://img.shields.io/badge/Saweria-Support_Local-FFA500?style=for-the-badge" alt="Support on Saweria"></a>
 </p>
-
-> [!NOTE]
-> **🇮🇩 Indonesian Users:** SocioBuzz and Saweria support local payment methods (Gopay, OVO, Dana, etc.) if you want to support me without using PayPal/Ko-fi!
 
 > [!TIP]
-> **Dedicated Server Hosting Partner:**
-> Looking for a reliable server to play with friends? Check out **BisectHosting** for 1-click modpack installations, automated backups, and 24/7 dedicated customer support.
+> **🇮🇩 Indonesian Local Payment Note:** Indonesian supporters can also support my development work directly using local payment options (**GoPay, OVO, Dana, QRIS, LinkAja**) via **Saweria** or **SocioBuzz**!
+
+Join our official Discord community for live development updates, early test builds, and friendly support:
+- 💬 **Discord Community:** [https://discord.gg/EV99bgAFqb](https://discord.gg/EV99bgAFqb)
 
 ---
 
-## 📜 Credits & Modpack Permissions
+## 📜 Metadata & Permissions
 
-| Property | Information |
+| Property | Value |
 | :--- | :--- |
-| **Creator / Author** | **Dasik** (Rifaditya) |
-| **Collection** | Instant Gratification Collection |
-| **License** | [GNU General Public License v3.0 (GPLv3)](https://www.gnu.org/licenses/gpl-3.0.html) |
-| **Source Code** | [GitHub - Rifaditya/Instant-Gratification-Max-Elytra-Fly-Speed](https://github.com/Rifaditya/Instant-Gratification-Max-Elytra-Fly-Speed) |
-| **Issue Tracker** | [GitHub Issues](https://github.com/Rifaditya/Instant-Gratification-Max-Elytra-Fly-Speed/issues) |
-| **Documentation / Wiki** | [GitHub Wiki](https://github.com/Rifaditya/Instant-Gratification-Max-Elytra-Fly-Speed/wiki) |
+| **Mod Name** | Max Elytra Fly Speed |
+| **Namespace / Mod ID** | `max_elytra_speed` |
+| **License** | GNU General Public License v3.0 (GPLv3) |
+| **Side Safety** | Server & Client (Server-Authoritative) |
+| **Source Code** | [GitHub Repository](https://github.com/Rifaditya/max-elytra-fly-speed) |
+| **Issue Tracker** | [GitHub Issues](https://github.com/Rifaditya/max-elytra-fly-speed/issues) |
 
 > [!IMPORTANT]
 > **📦 Modpack Permissions & Distribution:**<br>
@@ -174,7 +120,10 @@ If you enjoy the **Instant Gratification Collection**, consider fueling future d
 
 ---
 
-<p align="center">
-  <strong>Made with ❤️ for the Minecraft community</strong><br>
-  <em>Part of the Instant Gratification Collection</em>
-</p>
+<div align="center">
+
+**Made with ❤️ for the Minecraft community**
+
+*Part of the Instant Gratification Collection*
+
+</div>
