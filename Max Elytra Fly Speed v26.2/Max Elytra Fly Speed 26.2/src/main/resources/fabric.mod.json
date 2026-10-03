@@ -46,6 +46,10 @@
                 "modmenu.donate": "https://ko-fi.com/dasikigaijin",
                 "modmenu.kofi": "https://ko-fi.com/dasikigaijin"
             }
+        },
+        "modrinth": {
+            "projectId": "x8quK158",
+            "slug": "ig-max-elytra-fly-speed"
         }
     }
 }
