@@ -3,15 +3,11 @@ package net.instantgratification.maxelytraflyspeed.config;
 
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;
-import net.dasik.social.api.config.GuiHelper;
+import net.dasik.social.api.client.gui.UniversalConfigScreen;
 
 public class ModMenuIntegration implements ModMenuApi {
     @Override
     public ConfigScreenFactory<?> getModConfigScreenFactory() {
-        return GuiHelper.getOptionalYaclFactory(
-            "max-elytra-fly-speed",
-            "net.instantgratification.maxelytraflyspeed.config.YaclScreenHelper",
-            "createScreen"
-        );
+        return UniversalConfigScreen.createFactory("max-elytra-fly-speed", MaxElytraConfig.class);
     }
 }

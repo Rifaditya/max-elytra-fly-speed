@@ -7,6 +7,8 @@
   "gamerule.max-elytra-fly-speed.elytra_high_speed_acceleration": "High Speed Acceleration",
   "gamerule.max-elytra-fly-speed.elytra_high_speed_acceleration.description": "High-speed acceleration rate percentage above initial boost speed. Default is 15 (15% per tick).",
 
+  "config.max-elytra-fly-speed.title": "Max Elytra Fly Speed",
+
   "dasiklibrary.support.kofi.button": "☕ Support Solo Dev on Ko-fi",
   "dasiklibrary.support.kofi.tooltip": "Click to visit ko-fi.com/dasikigaijin in your default browser and directly support solo development!"
 }
