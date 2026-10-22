@@ -13,6 +13,7 @@
 | **MC 26.3** | Modern Lead | `1.0.25+26.3` | — | 🟢 **Up to Date** | Full modern lead build with YACL v3, Ko-fi support, drag scaling, 11 languages. |
 | **MC 26.2** | Modern Standard | `1.0.25+26.2` | — | 🟢 **Up to Date** | Full modern standard baseline with 100% parity across rules and physics. |
 | **MC 26.1.2** | Modern Sovereign | — | `1.0.26+26.1.2` | 🚀 **Ready to Publish** | Modern sovereign anchor port with full parity across rules, drag scaling, YACL GUI, and 11 languages. |
+| **MC 1.21.11** | Transitional Anchor | — | `1.0.26+1.21.11` | 🚀 **Ready to Publish** | Transitional anchor port with full parity across rules, drag scaling, YACL GUI, and 15 languages. |
 
 ---
 

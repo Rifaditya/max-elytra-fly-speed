@@ -1,0 +1,124 @@
+plugins {
+    id 'net.fabricmc.fabric-loom-remap' version '1.15-SNAPSHOT'
+    id 'maven-publish'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+    archivesName = project.archives_base_name
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven { url "https://maven.fabricmc.net/" }
+    maven { url "https://maven.isxander.dev/releases" }
+    maven { url "https://maven.terraformersmc.com/releases/" }
+    flatDir {
+        dirs 'e:/Minecraft Project/Dasik Library v1.21.11/Archive Jar of all versions/MC 1.21.11'
+    }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings loom.officialMojangMappings()
+
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+    modImplementation "net.dasik.social:dasik-library:${project.dasik_library_version}"
+
+    // Optional GUI Dependencies
+    modCompileOnly "com.terraformersmc:modmenu:${project.modmenu_version}"
+    testImplementation "com.terraformersmc:modmenu:${project.modmenu_version}"
+
+    // Testing
+    testImplementation platform('org.junit:junit-bom:5.10.2')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+loom {
+    mixin {
+        defaultRefmapName = "max-elytra-fly-speed-refmap.json"
+        useLegacyMixinAp = true
+    }
+}
+
+processResources {
+    inputs.property "version", project.version
+    inputs.property "loader_version", project.loader_version
+    inputs.property "minecraft_version", project.minecraft_version
+
+    filesMatching("fabric.mod.json") {
+        expand "version": project.version,
+               "loader_version": project.loader_version,
+               "minecraft_version": project.minecraft_version
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
+
+tasks.withType(JavaCompile).configureEach {
+    it.options.encoding = "UTF-8"
+    it.options.release = 21
+}
+
+java {
+    withSourcesJar()
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+jar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    from("LICENSE") {
+        rename { "${it}_${project.archives_base_name}" }
+    }
+    manifest {
+        attributes(
+            'Implementation-Title': project.archives_base_name,
+            'Implementation-Version': project.mod_version,
+            'Implementation-Vendor': 'Dasik (Rifaditya)',
+            'X-Origin-Author': 'Dasik (Rifaditya)',
+            'X-Origin-Repository': 'https://github.com/Rifaditya',
+            'X-Origin-License': 'GNU GPLv3'
+        )
+    }
+}
+
+tasks.register('archiveReleaseJar') {
+    dependsOn 'remapJar'
+    doLast {
+        def targetSubdir = "MC 1.21.11"
+        def localArchiveDir = file("../Archive Jar of all versions/${targetSubdir}")
+        def rootArchiveDir = file("../../Archive Jar of all versions/${targetSubdir}")
+        def modBuildsDir = file("../../builds")
+        def centralArchiveDir = file("e:/Minecraft Project/Builds Central Archive")
+        def centralHubDir = file("e:/Minecraft Project/minecraft-mod-release-hub/builds")
+
+        def targetTask = tasks.findByName('remapJar') ?: tasks.findByName('jar')
+        def builtJar = targetTask != null ? targetTask.archiveFile.get().asFile : null
+        if (builtJar == null || !builtJar.exists()) {
+            builtJar = file("build/libs/${project.archives_base_name}-${project.mod_version}.jar")
+        }
+
+        if (builtJar != null && builtJar.exists()) {
+            [localArchiveDir, rootArchiveDir, modBuildsDir, centralArchiveDir, centralHubDir].each { dir ->
+                if (dir != null) {
+                    dir.mkdirs()
+                    copy {
+                        from builtJar
+                        into dir
+                    }
+                    println "[AUTO-ARCHIVE] Successfully copied ${builtJar.name} to ${dir.absolutePath}"
+                }
+            }
+        }
+    }
+}
+
+build.finalizedBy('archiveReleaseJar')
