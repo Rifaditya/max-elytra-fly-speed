@@ -1,0 +1,167 @@
+plugins {
+    id 'net.fabricmc.fabric-loom' version '1.15.5'
+    id 'maven-publish'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+    archivesName = project.archives_base_name
+}
+
+repositories {
+    mavenLocal()
+    maven { url = "https://maven.fabricmc.net/" }
+    mavenCentral()
+    maven { url = "https://maven.isxander.dev/releases" }
+    maven { url = "https://maven.terraformersmc.com/releases/" }
+    maven { url = "https://maven.shedaniel.me/" }
+    maven { url = "https://jitpack.io" }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+
+    implementation "net.fabricmc:fabric-loader:${project.hasProperty('loader_version') ? project.loader_version : project.fabric_loader_version}"
+    implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+    implementation "net.fabricmc.fabric-api:fabric-permission-api-v1:1.0.0+5f4a394125"
+
+    implementation "net.dasik.social:dasik-library:${project.dasik_library_version}"
+
+    // Compile-time interface shims required for Dasik Library compile resolution
+    compileOnly "net.fabricmc.fabric-api:fabric-lifecycle-events-v1:4.1.1+9d6daa9756"
+    testCompileOnly "net.fabricmc.fabric-api:fabric-lifecycle-events-v1:4.1.1+9d6daa9756"
+
+    // MixinExtras for advanced injectors
+    implementation "io.github.llamalad7:mixinextras-fabric:0.4.1"
+    annotationProcessor "io.github.llamalad7:mixinextras-fabric:0.4.1"
+
+    // YACL & ModMenu GUI Integration (optional/compile-time only)
+    compileOnly "dev.isxander:yet-another-config-lib:${project.yacl_version}"
+    compileOnly "com.terraformersmc:modmenu:${project.modmenu_version}"
+
+    // Testing
+    testImplementation "com.terraformersmc:modmenu:${project.modmenu_version}"
+    testImplementation "org.junit.jupiter:junit-jupiter-api:5.10.2"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:5.10.2"
+    testRuntimeOnly "org.junit.platform:junit-platform-launcher"
+}
+
+test {
+    useJUnitPlatform()
+}
+
+processResources {
+    inputs.property "version", project.version
+    inputs.property "loader_version", (project.hasProperty('loader_version') ? project.loader_version : project.fabric_loader_version)
+    inputs.property "minecraft_version", project.minecraft_version
+    filesMatching("fabric.mod.json") {
+        expand "version": project.version,
+               "loader_version": (project.hasProperty('loader_version') ? project.loader_version : project.fabric_loader_version),
+               "minecraft_version": project.minecraft_version
+    }
+}
+
+loom {
+    mixin {
+        defaultRefmapName = "max-elytra-fly-speed-refmap.json"
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    it.options.release = 25
+}
+
+jar {
+    from("LICENSE") {
+        rename { "${it}_${project.archives_base_name}" }
+    }
+    manifest {
+        attributes(
+            'Implementation-Title': project.archives_base_name,
+            'Implementation-Version': project.mod_version,
+            'Implementation-Vendor': 'Dasik (Rifaditya)',
+            'X-Origin-Author': 'Dasik (Rifaditya)',
+            'X-Origin-Repository': 'https://github.com/Rifaditya',
+            'X-Origin-License': 'GNU GPLv3'
+        )
+    }
+}
+
+afterEvaluate {
+    def targetJarTask = tasks.findByName('remapJar') ?: tasks.findByName('jar')
+    if (targetJarTask != null) {
+        def archiveTask = tasks.register('archiveReleaseJar') {
+            group = 'build'
+            description = 'Automatically copies built release JAR to archives and release hub'
+            dependsOn targetJarTask
+            doLast {
+                def jarFile = targetJarTask.archiveFile.get().asFile
+                if (!jarFile.exists()) {
+                    jarFile = file("build/libs/${project.archives_base_name}-${project.mod_version}.jar")
+                }
+                if (jarFile.exists()) {
+                    def mcVer = project.hasProperty('minecraft_version') ? project.minecraft_version.toString() : ""
+                    def targetSubdir = mcVer.startsWith("26.3") ? "MC 26.3" :
+                                       mcVer.startsWith("26.2") ? "MC 26.2" :
+                                       mcVer.startsWith("26.1") ? "MC 26.1.2" :
+                                       mcVer.startsWith("1.21.11") ? "MC 1.21.11" :
+                                       mcVer.startsWith("1.21") ? "MC 1.21.1" :
+                                       mcVer.startsWith("1.20") ? "MC 1.20.1" : "MC Unknown"
+
+                    // 1. Subproject local archive
+                    def subprojectArchive = file("../Archive Jar of all versions/${targetSubdir}")
+                    subprojectArchive.mkdirs()
+                    copy {
+                        from jarFile
+                        into subprojectArchive
+                    }
+                    println "[AUTO-ARCHIVE] Successfully copied ${jarFile.name} to subproject Archive directory: ${subprojectArchive.canonicalPath}"
+
+                    // 1b. Root Collection Archive
+                    def collectionArchive = file("../../Archive Jar of all versions/${targetSubdir}")
+                    collectionArchive.mkdirs()
+                    copy {
+                        from jarFile
+                        into collectionArchive
+                    }
+                    println "[AUTO-ARCHIVE] Successfully copied ${jarFile.name} to root collection Archive directory: ${collectionArchive.canonicalPath}"
+
+                    // 2. Mod builds directory
+                    def modBuildsDir = file("../../builds")
+                    modBuildsDir.mkdirs()
+                    copy {
+                        from jarFile
+                        into modBuildsDir
+                    }
+                    println "[AUTO-ARCHIVE] Successfully copied ${jarFile.name} to mod builds directory: ${modBuildsDir.canonicalPath}"
+
+                    // 3. Central Archive
+                    def centralArchiveDir = file("E:/Minecraft Project/Builds Central Archive")
+                    if (centralArchiveDir.exists()) {
+                        copy {
+                            from jarFile
+                            into centralArchiveDir
+                        }
+                        println "[AUTO-ARCHIVE] Successfully copied ${jarFile.name} to Builds Central Archive: ${centralArchiveDir.canonicalPath}"
+                    }
+
+                    // 4. Release Hub builds
+                    def hubBuildsDir = file("E:/Minecraft Project/minecraft-mod-release-hub/builds")
+                    if (hubBuildsDir.exists()) {
+                        copy {
+                            from jarFile
+                            into hubBuildsDir
+                        }
+                        println "[AUTO-ARCHIVE] Successfully copied ${jarFile.name} to release hub builds: ${hubBuildsDir.canonicalPath}"
+                    }
+                }
+            }
+        }
+
+        tasks.named('build').configure {
+            finalizedBy archiveTask
+        }
+    }
+}

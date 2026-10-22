@@ -15,7 +15,7 @@ This file tracks planned features, technical refinements, performance optimizati
 | [`BL-MEFS-002`](tickets/BL-MEFS-002.md) | `[TECH_DEBT]` | Downstream Ecosystem & Toolchain Alignment | `[HIGH]` | All Anchors | `✅ RESOLVED` | [View Ticket](tickets/BL-MEFS-002.md) |
 | [`BL-MEFS-003`](tickets/BL-MEFS-003.md) | `[TECH_DEBT]` | Adopt 5-Pillar Testing & Sidedness Verification Harness | `[MEDIUM]` | All Anchors | `✅ RESOLVED` | [View Ticket](tickets/BL-MEFS-003.md) |
 | [`BL-MEFS-004`](tickets/BL-MEFS-004.md) | `[TECH_DEBT]` | Migrate Client Configuration GUI to UniversalConfigScreen | `[MEDIUM]` | All Anchors | `✅ RESOLVED` | [View Ticket](tickets/BL-MEFS-004.md) |
-| [`BL-MEFS-005`](tickets/BL-MEFS-005.md) | `[FEATURE]` | Multi-Era Anchor Porting (Phase 1): Modern Sovereign Port Max Elytra Fly Speed v26.1.2 | `[HIGH]` | 26.1.2 | `📌 DEFERRED` | [View Ticket](tickets/BL-MEFS-005.md) |
+| [`BL-MEFS-005`](tickets/BL-MEFS-005.md) | `[FEATURE]` | Multi-Era Anchor Porting (Phase 1): Modern Sovereign Port Max Elytra Fly Speed v26.1.2 | `[HIGH]` | 26.1.2 | `✅ RESOLVED` | [View Ticket](tickets/BL-MEFS-005.md) |
 | [`BL-MEFS-006`](tickets/BL-MEFS-006.md) | `[FEATURE]` | Multi-Era Anchor Porting (Phase 2A): Transitional Port Max Elytra Fly Speed v1.21.11 | `[HIGH]` | 1.21.11 | `📌 DEFERRED` | [View Ticket](tickets/BL-MEFS-006.md) |
 | [`BL-MEFS-007`](tickets/BL-MEFS-007.md) | `[FEATURE]` | Multi-Era Anchor Porting (Phase 2B): Modern Era Port Max Elytra Fly Speed v1.21.1 | `[HIGH]` | 1.21.1 | `📌 DEFERRED` | [View Ticket](tickets/BL-MEFS-007.md) |
 | [`BL-MEFS-008`](tickets/BL-MEFS-008.md) | `[FEATURE]` | Multi-Era Anchor Porting (Phase 2C): Long-Term Support Port Max Elytra Fly Speed v1.20.1 | `[HIGH]` | 1.20.1 | `📌 DEFERRED` | [View Ticket](tickets/BL-MEFS-008.md) |
