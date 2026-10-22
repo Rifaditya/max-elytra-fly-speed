@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "net.instantgratification.maxelytraflyspeed.mixin",
+  "refmap": "max-elytra-fly-speed-refmap.json",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "LivingEntityMixin",
+    "FireworkRocketEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
