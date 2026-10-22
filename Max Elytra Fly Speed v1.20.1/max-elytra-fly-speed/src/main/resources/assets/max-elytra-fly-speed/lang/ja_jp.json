@@ -1,0 +1,9 @@
+{
+  "gamerule.category.max-elytra-fly-speed.max-elytra-fly-speed": "エリトラの最高飛行速度",
+  "gamerule.max-elytra-fly-speed.max_elytra_fly_speed": "最高飛行速度 (ブロック/秒)",
+  "gamerule.max-elytra-fly-speed.max_elytra_fly_speed.description": "エリトラ飛行の絶対最大速度 (ブロック/秒)。デフォルト: 50ブロック/秒。",
+  "gamerule.max-elytra-fly-speed.elytra_initial_boost_speed": "初期ブースト速度",
+  "gamerule.max-elytra-fly-speed.elytra_initial_boost_speed.description": "バニラの高速花火ロケットブーストが適用される速度しきい値 (ブロック/秒)。デフォルト: 30。",
+  "gamerule.max-elytra-fly-speed.elytra_high_speed_acceleration": "高速域加速度",
+  "gamerule.max-elytra-fly-speed.elytra_high_speed_acceleration.description": "初期ブースト速度を超えた際のティックごとの加速率パーセンテージ。デフォルト: 15 (毎ティック15%)。"
+}

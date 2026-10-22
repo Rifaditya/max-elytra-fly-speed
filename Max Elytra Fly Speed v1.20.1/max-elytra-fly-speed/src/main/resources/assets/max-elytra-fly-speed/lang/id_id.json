@@ -1,0 +1,9 @@
+{
+  "gamerule.category.max-elytra-fly-speed.max-elytra-fly-speed": "Kecepatan Terbang Elytra Maksimal",
+  "gamerule.max-elytra-fly-speed.max_elytra_fly_speed": "Kecepatan Maksimal (Blok/Detik)",
+  "gamerule.max-elytra-fly-speed.max_elytra_fly_speed.description": "Kecepatan terbang Elytra maksimal absolut dalam Blok/Detik. Default: 50 blok/detik.",
+  "gamerule.max-elytra-fly-speed.elytra_initial_boost_speed": "Kecepatan Dorongan Awal",
+  "gamerule.max-elytra-fly-speed.elytra_initial_boost_speed.description": "Batas kecepatan (Blok/Detik) di mana dorongan roket kembang api cepat vanilla diterapkan. Default: 30.",
+  "gamerule.max-elytra-fly-speed.elytra_high_speed_acceleration": "Akselerasi Kecepatan Tinggi",
+  "gamerule.max-elytra-fly-speed.elytra_high_speed_acceleration.description": "Persentase laju akselerasi per tick di atas batas kecepatan dorongan awal. Default: 15 (15% per tick)."
+}
