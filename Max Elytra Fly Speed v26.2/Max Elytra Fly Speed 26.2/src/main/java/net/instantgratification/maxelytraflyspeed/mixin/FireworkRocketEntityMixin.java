@@ -1,6 +1,5 @@
-package net.instantgratification.maxelytraflyspeed.mixin;
-
 // Copyright (C) 2026 Dasik (Rifaditya) | GNU GPLv3
+package net.instantgratification.maxelytraflyspeed.mixin;
 
 // Verified against: FireworkRocketEntity.java (26.2+)
 

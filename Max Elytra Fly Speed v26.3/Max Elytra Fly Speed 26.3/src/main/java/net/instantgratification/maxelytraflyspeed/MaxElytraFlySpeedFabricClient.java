@@ -1,6 +1,5 @@
-package net.instantgratification.maxelytraflyspeed;
-
 // Copyright (C) 2026 Dasik (Rifaditya) | GNU GPLv3
+package net.instantgratification.maxelytraflyspeed;
 
 // Verified against: ClientModInitializer.java (Fabric API)
 

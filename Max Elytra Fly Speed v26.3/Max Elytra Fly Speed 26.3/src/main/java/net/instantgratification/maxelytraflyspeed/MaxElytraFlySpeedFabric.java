@@ -1,6 +1,5 @@
-package net.instantgratification.maxelytraflyspeed;
-
 // Copyright (C) 2026 Dasik (Rifaditya) | GNU GPLv3
+package net.instantgratification.maxelytraflyspeed;
 
 // Verified against: ModInitializer.java (Fabric API)
 // Verified against: DynamicGameRuleManager.java (DasikLibrary 1.8.2)
@@ -28,7 +27,6 @@ public class MaxElytraFlySpeedFabric implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        net.instantgratification.maxelytraflyspeed.util.ModVersionGuard.checkClass("Max Elytra Fly Speed", "net.minecraft.world.item.ItemStack");
         LOGGER.info("Instant Gratification: Max Elytra Fly Speed Initializing...");
 
         MAX_ELYTRA_FLY_SPEED = DynamicGameRuleManager.integerRule(MOD_ID + ":max_elytra_fly_speed", CUSTOM_CATEGORY, 50)
