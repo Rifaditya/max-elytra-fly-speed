@@ -11,7 +11,7 @@ This file tracks planned features, technical refinements, performance optimizati
 
 | ID | Category | Title | Priority | Target Version | Status | Specification |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| [`BL-MEFS-001`](tickets/BL-MEFS-001.md) | `[FEATURE]` | Multi-Era Anchor Porting: Max Elytra Fly Speed (Umbrella) | `[HIGH]` | `Multi-Era` | `📌 DEFERRED` | [View Ticket](tickets/BL-MEFS-001.md) |
+| [`BL-MEFS-001`](tickets/BL-MEFS-001.md) | `[FEATURE]` | Multi-Era Anchor Porting: Max Elytra Fly Speed (Umbrella) | `[HIGH]` | `Multi-Era` | `✅ RESOLVED` | [View Ticket](tickets/BL-MEFS-001.md) |
 | [`BL-MEFS-002`](tickets/BL-MEFS-002.md) | `[TECH_DEBT]` | Downstream Ecosystem & Toolchain Alignment | `[HIGH]` | All Anchors | `✅ RESOLVED` | [View Ticket](tickets/BL-MEFS-002.md) |
 | [`BL-MEFS-003`](tickets/BL-MEFS-003.md) | `[TECH_DEBT]` | Adopt 5-Pillar Testing & Sidedness Verification Harness | `[MEDIUM]` | All Anchors | `✅ RESOLVED` | [View Ticket](tickets/BL-MEFS-003.md) |
 | [`BL-MEFS-004`](tickets/BL-MEFS-004.md) | `[TECH_DEBT]` | Migrate Client Configuration GUI to UniversalConfigScreen | `[MEDIUM]` | All Anchors | `✅ RESOLVED` | [View Ticket](tickets/BL-MEFS-004.md) |

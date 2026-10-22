@@ -15,6 +15,7 @@
 | **MC 26.1.2** | Modern Sovereign | — | `1.0.26+26.1.2` | 🚀 **Ready to Publish** | Modern sovereign anchor port with full parity across rules, drag scaling, YACL GUI, and 11 languages. |
 | **MC 1.21.11** | Transitional Anchor | — | `1.0.26+1.21.11` | 🚀 **Ready to Publish** | Transitional anchor port with full parity across rules, drag scaling, YACL GUI, and 15 languages. |
 | **MC 1.21.1** | Modern Anchor | — | `1.0.26+1.21.1` | 🚀 **Ready to Publish** | Modern anchor port with full parity across rules, drag scaling, YACL GUI, and 15 languages. |
+| **MC 1.20.1** | LTS Anchor | — | `1.0.26+1.20.1` | 🚀 **Ready to Publish** | LTS anchor port with full parity across rules, drag scaling, YACL GUI, and 15 languages. |
 
 ---
 
