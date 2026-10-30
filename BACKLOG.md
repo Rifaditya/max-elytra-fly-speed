@@ -1,7 +1,7 @@
 # 📌 Max Elytra Fly Speed Backlog
 
-<!-- Highest Historical ID: BL-MEFS-008 (Next Ticket Must Start at BL-MEFS-009) -->
-> **Next Available Ticket ID**: `[BL-MEFS-009]`
+<!-- Highest Historical ID: BL-MEFS-009 (Next Ticket Must Start at BL-MEFS-010) -->
+> **Next Available Ticket ID**: `[BL-MEFS-010]`
 
 This file tracks planned features, technical refinements, performance optimizations, and deferred improvements for **Max Elytra Fly Speed**.
 
@@ -11,7 +11,7 @@ This file tracks planned features, technical refinements, performance optimizati
 
 | ID | Category | Title | Priority | Target Version | Status | Specification |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| — | — | *No active backlog items* | — | — | — | — |
+| [`BL-MEFS-009`](tickets/BL-MEFS-009.md) | `[GOVERNANCE]` | Storefront Reconciliation: Align Mod Pages with Current Public Release | `[HIGH]` | `Platform Pages` | `📌 DEFERRED` | [View Ticket](tickets/BL-MEFS-009.md) |
 
 ---
 

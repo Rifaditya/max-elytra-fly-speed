@@ -1,7 +1,7 @@
 # 🎫 Max Elytra Fly Speed Tickets & Modular Backlog
 
-<!-- Highest Historical ID: BL-MEFS-008 (Next Ticket Must Start at BL-MEFS-009) -->
-> **Next Available Ticket ID**: `[BL-MEFS-009]`
+<!-- Highest Historical ID: BL-MEFS-009 (Next Ticket Must Start at BL-MEFS-010) -->
+> **Next Available Ticket ID**: `[BL-MEFS-010]`
 
 This directory houses dedicated atomic ticket specifications for **Max Elytra Fly Speed**.
 
@@ -15,3 +15,4 @@ This directory houses dedicated atomic ticket specifications for **Max Elytra Fl
 | `[BL-MEFS-006]` | `[FEATURE]` | Multi-Era Anchor Porting (Phase 2A): Transitional Port Max Elytra Fly Speed v1.21.11 | `✅ RESOLVED` | [BL-MEFS-006.md](BL-MEFS-006.md) |
 | `[BL-MEFS-007]` | `[FEATURE]` | Multi-Era Anchor Porting (Phase 2B): Modern Era Port Max Elytra Fly Speed v1.21.1 | `✅ RESOLVED` | [BL-MEFS-007.md](BL-MEFS-007.md) |
 | `[BL-MEFS-008]` | `[FEATURE]` | Multi-Era Anchor Porting (Phase 2C): Long-Term Support Port Max Elytra Fly Speed v1.20.1 | `✅ RESOLVED` | [BL-MEFS-008.md](BL-MEFS-008.md) |
+| `[BL-MEFS-009]` | `[GOVERNANCE]` | Storefront Reconciliation: Align Mod Pages with Current Public Release | `📌 DEFERRED` | [BL-MEFS-009.md](BL-MEFS-009.md) |
