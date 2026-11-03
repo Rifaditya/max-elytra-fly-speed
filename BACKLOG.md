@@ -1,7 +1,7 @@
 # 📌 Max Elytra Fly Speed Backlog
 
-<!-- Highest Historical ID: BL-MEFS-009 (Next Ticket Must Start at BL-MEFS-010) -->
-> **Next Available Ticket ID**: `[BL-MEFS-010]`
+<!-- Highest Historical ID: BL-MEFS-011 (Next Ticket Must Start at BL-MEFS-012) -->
+> **Next Available Ticket ID**: `[BL-MEFS-012]`
 
 This file tracks planned features, technical refinements, performance optimizations, and deferred improvements for **Max Elytra Fly Speed**.
 
@@ -11,7 +11,9 @@ This file tracks planned features, technical refinements, performance optimizati
 
 | ID | Category | Title | Priority | Target Version | Status | Specification |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| [`BL-MEFS-009`](tickets/BL-MEFS-009.md) | `[GOVERNANCE]` | Storefront Reconciliation: Align Mod Pages with Current Public Release | `[HIGH]` | `Platform Pages` | `📌 DEFERRED` | [View Ticket](tickets/BL-MEFS-009.md) |
+| [`BL-MEFS-010`](tickets/BL-MEFS-010.md) | `[TECH_DEBT]` | Scaffold Anchor 7: Max Elytra Fly Speed v26.x (rolling 26.3+) | `[MEDIUM]` | Multi-Version Parity | `📌 DEFERRED` | [View Ticket](tickets/BL-MEFS-010.md) |
+| [`BL-MEFS-009`](tickets/BL-MEFS-009.md) | `[GOVERNANCE]` | Storefront Reconciliation: Align Mod Pages with Current Public Release | `[HIGH]` | `Platform Pages` | `✅ RESOLVED` | [View Ticket](tickets/BL-MEFS-009.md) |
+| [`BL-MEFS-011`](tickets/BL-MEFS-011.md) | `[TECH_DEBT]` | Wiki Audit & Update to Latest Version: Max Elytra Fly Speed | `[MEDIUM]` | `All Anchors` | `📌 DEFERRED` | [View Ticket](tickets/BL-MEFS-011.md) |
 
 ---
 

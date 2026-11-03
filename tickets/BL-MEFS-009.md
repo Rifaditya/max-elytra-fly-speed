@@ -4,7 +4,7 @@
 - **Category**: `[GOVERNANCE]`
 - **Priority**: `[HIGH]`
 - **Scope**: `Platform Documentation & Metadata`
-- **Status**: `📌 DEFERRED`
+- **Status**: `✅ RESOLVED`
 - **Target Repository / Root**: `Instant Gratification Collection/Max Elytra Fly Speed`
 
 ---
@@ -20,10 +20,10 @@
    - ❌ Do not use corporate "we" voice in platform documentation; enforce the Solo Indie Voice ("I") invariant.
    - ❌ Do not modify Java source code or bump SemVer within this ticket.
 4. **✅ Definition of Done (Binary Verification Checklist)**:
-   - [ ] Modrinth description (`Doc/Platform Pages/Modrinth/description.md`) aligned with public version.
-   - [ ] CurseForge markdown (`Doc/Platform Pages/CurseForge/description.md`) aligned with public version.
-   - [ ] CurseForge semantic HTML (`Doc/Platform Pages/CurseForge/description.html`) updated with valid semantic tags.
-   - [ ] Zero unreleased or hallucinated mechanics claimed in storefronts.
+   - [x] Modrinth description (`Doc/Platform Pages/Modrinth/description.md`) aligned with public version.
+   - [x] CurseForge markdown (`Doc/Platform Pages/CurseForge/description.md`) aligned with public version.
+   - [x] CurseForge semantic HTML (`Doc/Platform Pages/CurseForge/description.html`) updated with valid semantic tags.
+   - [x] Zero unreleased or hallucinated mechanics claimed in storefronts.
 
 ---
 
@@ -77,8 +77,18 @@ Item 1.25 of the Studio Constitution (*Storefront Factual Accuracy & Anti-Halluc
 
 ## 🏁 7. 5-Pillar Verification Checklist
 
-- [ ] **Pillar 1 (Source & Binary Parity)**: 100% of features claimed in platform descriptions exist in public release binaries.
-- [ ] **Pillar 2 (Zero-Hallucination Guard)**: Zero unreleased, early-access, or phantom mechanics remain across storefront docs.
-- [ ] **Pillar 3 (Brigadier AST Alignment)**: Documented command syntax matches the public release binary.
-- [ ] **Pillar 4 (GameTest & Config Parity)**: Documented GameRule keys and default values match the public release binary.
-- [ ] **Pillar 5 (Sidedness & Platform Hygiene)**: Solo indie voice ("I") verified across all documents; CurseForge HTML valid semantic markup.
+- [x] **Pillar 1 (Source & Binary Parity)**: 100% of features claimed in platform descriptions exist in public release binaries.
+- [x] **Pillar 2 (Zero-Hallucination Guard)**: Zero unreleased, early-access, or phantom mechanics remain across storefront docs. Purged: Kinetic Impact Shock Absorber, Emergency Airbag Shield, Server Anti-Rubberband system, all 4 phantom GameRules (`max_elytra_speed:*`), wrong Mod ID `max_elytra_speed`.
+- [x] **Pillar 3 (Brigadier AST Alignment)**: No command system exists in this mod — confirmed by source audit. Not documented.
+- [x] **Pillar 4 (GameTest & Config Parity)**: Documented GameRules match source: `max-elytra-fly-speed:max_elytra_fly_speed` (50, 1–500), `max-elytra-fly-speed:elytra_initial_boost_speed` (30, 1–300), `max-elytra-fly-speed:elytra_high_speed_acceleration` (15, 1–1000).
+- [x] **Pillar 5 (Sidedness & Platform Hygiene)**: Solo indie voice ("I") verified; CurseForge HTML uses pure semantic markup only.
+
+---
+
+## ✅ Resolution Notes
+
+- **Resolved**: 2026-11-03
+- **Modrinth** (`x8quK158`): Description pushed (HTTP 204 ✅). Links synced (wiki_url, source_url, issues_url ✅).
+- **CurseForge** (`1617614`): HTML ready at `Doc/Platform Pages/CurseForge/description.html`. Edit at: https://authors.curseforge.com/projects/1617614/edit
+- **Phantom purge**: Removed Kinetic Impact Shock Absorber, Emergency Airbag Shield, Server Anti-Rubberband, all 4 fake `max_elytra_speed:*` GameRules, wrong Mod ID namespace, LaTeX math in HTML, "our Discord" corporate voice.
+- **Ground truth documented**: 3 GameRules (`max-elytra-fly-speed:max_elytra_fly_speed`, `elytra_initial_boost_speed`, `elytra_high_speed_acceleration`); 2 Mixins (`LivingEntityMixin`, `FireworkRocketEntityMixin`); Dasik Library >= 1.9.0 required.
